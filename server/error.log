@@ -1,0 +1,109 @@
+{"level":"error","message":"Email not found","service":"test-service","timestamp":"2026-04-02T13:53:34.418Z"}
+{"level":"error","message":"Email not found","service":"test-service","timestamp":"2026-04-02T13:53:37.782Z"}
+{"level":"error","message":"Email not found","service":"test-service","timestamp":"2026-04-02T13:53:42.032Z"}
+{"level":"error","message":"Enter the verified email","service":"test-service","timestamp":"2026-04-02T15:16:49.333Z"}
+{"level":"error","message":"Enter the verified email","service":"test-service","timestamp":"2026-04-02T15:16:56.144Z"}
+{"level":"error","message":"Enter the verified email","service":"test-service","timestamp":"2026-04-02T15:17:39.492Z"}
+{"level":"error","message":"Validation error: Validation isLowercase on fullname failed","service":"test-service","timestamp":"2026-04-02T15:18:42.582Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:23:55.805Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:30:46.738Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:30:47.813Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:31:05.905Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:37:32.528Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:37:36.640Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:43:29.920Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:43:30.972Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:43:31.838Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T15:55:21.400Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:05:57.562Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:06:05.230Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:07:29.305Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:07:30.502Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:07:30.940Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:07:31.380Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:12:35.681Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:26:23.567Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:26:48.092Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:27:01.812Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:27:03.228Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:27:20.804Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:27:22.132Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:54:30.209Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:54:31.425Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T16:56:37.658Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:54.720Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:55.552Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:56.103Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:56.281Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:56.473Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:56.656Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:56.857Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:57.025Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:57.200Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:57.392Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:57.685Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:05:57.878Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:08:59.650Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:10:29.046Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:12:08.647Z"}
+{"level":"error","message":"WHERE parameter \"number\" has invalid \"undefined\" value","service":"test-service","timestamp":"2026-04-02T17:19:35.515Z"}
+{"level":"error","message":"Failed to generate tokens","service":"test-service","timestamp":"2026-04-02T17:25:09.307Z"}
+{"level":"error","message":"Failed to generate tokens","service":"test-service","timestamp":"2026-04-02T17:27:45.179Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:04.669Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:06.506Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:07.301Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:07.494Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:07.700Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:07.895Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:08.093Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:08.292Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:08.479Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:08.772Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:08.982Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:09.191Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:09.396Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:09.586Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:09.783Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:09.995Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:10.183Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:10.407Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:42:17.066Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:43.797Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:44.550Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:44.699Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:44.903Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:45.104Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:45.328Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:52.686Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:53.341Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:53.565Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:53.826Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:54.019Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:54.228Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:54.442Z"}
+{"level":"error","message":"Token is invalid","service":"test-service","timestamp":"2026-04-02T17:43:55.450Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-02T17:46:46.878Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-02T17:50:07.893Z"}
+{"level":"error","message":"invalid signature","service":"test-service","timestamp":"2026-04-02T17:53:41.278Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-02T20:30:27.153Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-02T20:35:23.874Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:36:26.630Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:36:29.777Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:36:30.620Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:37:01.783Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:37:51.973Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:38:10.701Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-04T11:39:56.254Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:45:03.931Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:56:09.391Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:56:26.480Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:56:41.587Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:57:25.704Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:57:49.386Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T11:57:53.584Z"}
+{"level":"error","message":"Invalid otp","service":"test-service","timestamp":"2026-04-04T11:58:05.211Z"}
+{"level":"error","message":"Invalid otp","service":"test-service","timestamp":"2026-04-04T13:50:15.757Z"}
+{"level":"error","message":"\"otp\" must be greater than or equal to 1000","service":"test-service","timestamp":"2026-04-04T14:07:36.409Z"}
+{"level":"error","message":"Invalid otp","service":"test-service","timestamp":"2026-04-04T15:29:08.595Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-04T16:16:22.092Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-04T16:19:08.045Z"}
