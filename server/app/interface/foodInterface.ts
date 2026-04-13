@@ -5,7 +5,7 @@ export default interface FoodAttributes {
   price: number;
   category: string;
   image?: { publicId: string; url: string } | null;
-  slug?: Promise<string> | string;
+  slug?: string | null;
   numberOfOrders?: number;
   isDeleted?: boolean;
   createdAt?: Date;

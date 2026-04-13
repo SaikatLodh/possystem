@@ -55,4 +55,14 @@ input FileUploadInput {
     updatedAt: String!
   }
 
+  type Booking {
+    id: String!
+    table: Table!
+    foods: [Food!]!
+    user: User!
+    isDeleted: Boolean!
+    createdAt: String!
+    updatedAt: String!
+}
+
 `;

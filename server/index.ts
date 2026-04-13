@@ -1,7 +1,8 @@
 import { startServer } from "./app/app.ts";
 import db from "./app/config/db.ts";
+import "./app/config/assotiation.ts";
 
-const port = Number(process.env.PORT) || 8000;
+const port = Number(process.env.PORT) || 5000;
 
 db.sync({ force: false })
   .then(() => {

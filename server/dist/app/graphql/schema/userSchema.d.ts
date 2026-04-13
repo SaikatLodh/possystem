@@ -1,2 +1,0 @@
-export declare const userSchema = "#graphql\n\ntype userResponse {\nstatus: Int!\nmessage: String!\nuser: User\n}\n\ntype Query {\ngetUser: userResponse!\n}\n\ntype Mutation {\nupdateUser(fullname:String, file: FileUploadInput):response!\nchangePassword(oldPassword: String!, confirmPassword: String!, password: String!): response!\n}\n    \n";
-//# sourceMappingURL=userSchema.d.ts.map

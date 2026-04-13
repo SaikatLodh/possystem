@@ -107,3 +107,61 @@
 {"level":"error","message":"Invalid otp","service":"test-service","timestamp":"2026-04-04T15:29:08.595Z"}
 {"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-04T16:16:22.092Z"}
 {"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-04T16:19:08.045Z"}
+{"level":"error","message":"Table is not associated to Booking!","service":"test-service","timestamp":"2026-04-09T20:43:49.690Z"}
+{"level":"error","message":"Table is not associated to Booking!","service":"test-service","timestamp":"2026-04-09T20:52:43.350Z"}
+{"level":"error","message":"Unknown column 'table.bookingIds' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:02:25.850Z"}
+{"level":"error","message":"Unknown column 'table.bookingIds' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:02:26.950Z"}
+{"level":"error","message":"Unknown column 'table.bookingIds' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:02:27.820Z"}
+{"level":"error","message":"Unknown column 'foods->BookingFoods.name' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:04:26.441Z"}
+{"level":"error","message":"Unknown column 'foods->BookingFoods.name' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:04:27.560Z"}
+{"level":"error","message":"Unknown column 'foods->BookingFoods.name' in 'field list'","service":"test-service","timestamp":"2026-04-09T21:04:32.127Z"}
+{"level":"error","message":"Table is not associated to Booking!","service":"test-service","timestamp":"2026-04-10T13:40:05.232Z"}
+{"level":"error","message":"Table is not associated to Booking!","service":"test-service","timestamp":"2026-04-10T13:40:29.181Z"}
+{"level":"error","message":"Table is not associated to Booking!","service":"test-service","timestamp":"2026-04-10T13:40:30.288Z"}
+{"level":"error","message":"Unexpected token 'o', \"[object Seq\"... is not valid JSON","service":"test-service","timestamp":"2026-04-10T15:15:48.224Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:19:23.788Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:20:05.277Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:34.074Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:35.279Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:35.463Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:35.646Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:35.837Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.007Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.174Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.364Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.554Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.736Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:36.948Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:37.134Z"}
+{"level":"error","message":"Cannot add or update a child row: a foreign key constraint fails (`possystem`.`bookingfoods`, CONSTRAINT `bookingfoods_ibfk_2` FOREIGN KEY (`foodId`) REFERENCES `foods` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)","service":"test-service","timestamp":"2026-04-10T16:21:42.659Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-11T19:52:25.380Z"}
+{"level":"error","message":"Otp not sent","service":"test-service","timestamp":"2026-04-11T19:54:56.537Z"}
+{"level":"error","message":"Otp not sent","service":"test-service","timestamp":"2026-04-11T19:55:00.999Z"}
+{"level":"error","message":"Otp not sent","service":"test-service","timestamp":"2026-04-11T19:55:02.521Z"}
+{"level":"error","message":"Otp not sent","service":"test-service","timestamp":"2026-04-11T19:55:11.063Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-11T19:59:43.030Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-11T19:59:45.010Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-11T20:00:32.737Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-11T20:01:21.920Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:33:51.319Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:21.405Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:22.194Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:22.592Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:22.834Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:22.867Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:23.174Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:23.436Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:23.668Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:34:23.907Z"}
+{"level":"error","message":"Table 'possystem.bookingfoods' doesn't exist","service":"test-service","timestamp":"2026-04-11T20:36:12.445Z"}
+{"level":"error","message":"Unknown column 'id' in 'field list'","service":"test-service","timestamp":"2026-04-12T21:56:22.267Z"}
+{"level":"error","message":"Table 'possystem.payments' doesn't exist","service":"test-service","timestamp":"2026-04-13T18:13:34.782Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-13T18:45:14.362Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-13T18:45:15.762Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-13T18:49:08.357Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:29:35.020Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:33:37.205Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:33:38.481Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:34:44.840Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:35:09.781Z"}
+{"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:35:33.979Z"}

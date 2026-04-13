@@ -8,6 +8,10 @@ import graphqlUploadExpress from "graphql-upload/graphqlUploadExpress.mjs";
 import connectGraphql from "./graphql/graphql.ts";
 import path from "path";
 import { fileURLToPath } from "url";
+import { seedUsers } from "./seedUsers.ts";
+import { seedTables } from "./seedTables.ts";
+import { seedFoods } from "./seedFoods.ts";
+import { seedBookings } from "./seedBookings.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -45,7 +49,10 @@ export function createApp() {
   app.use(express.static("public"));
   app.use(express.static(path.join(__dirname, "uploads")));
   app.use(cookePerser());
-
+  // seedUsers()
+  // seedTables()
+  // seedFoods()
+  // seedBookings()
   return app;
 }
 
@@ -61,7 +68,7 @@ export async function startServer(
     "/graphql",
     graphqlUploadExpress({ maxFileSize: 52428800, maxFiles: 10 }),
     expressMiddleware(graphqlServer, {
-      context: async ({ req }) => ({ req }),
+      context: async ({ req, res }) => ({ req, res }),
     }),
   );
 

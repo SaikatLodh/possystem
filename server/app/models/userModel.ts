@@ -1,7 +1,9 @@
 import { DataTypes, Model } from "sequelize";
+import type { BelongsToManyAddAssociationMixin, BelongsToManyAddAssociationsMixin } from "sequelize";
 import db from "../config/db.ts";
 import type UserAttributes from "../interface/userInterface.ts";
 import { ROLES, type Role } from "../config/userRoles.ts";
+import Food from "./foodModel.ts";
 
 class User extends Model<UserAttributes> implements UserAttributes {
   declare id?: string;
@@ -17,6 +19,10 @@ class User extends Model<UserAttributes> implements UserAttributes {
   declare isDeleted?: boolean;
   declare createdAt?: Date;
   declare updatedAt?: Date;
+
+  declare addFood: BelongsToManyAddAssociationMixin<Food, string>;
+  declare addFoods: BelongsToManyAddAssociationsMixin<Food, string>;
+
 }
 
 User.init(

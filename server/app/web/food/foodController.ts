@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import Food from "../../models/foodModel.ts";
 import STATUS_CODES from "../../config/httpStatusCode.ts";
 import logger from "../../helpers/logger.ts";
@@ -44,7 +45,7 @@ class FoodController {
         };
       }
 
-      const slug = generateUniqueSlug(name);
+      const slug = await generateUniqueSlug(name);
 
       if (!slug) {
         logger.error("Slug generation failed");
@@ -111,22 +112,56 @@ class FoodController {
       };
     }
   }
-  async getFoods() {
+  async getFoods({
+    page = 1,
+    limit = 10,
+    search,
+    category,
+    sortBy = "createdAt",
+    sortOrder = "DESC",
+  }: {
+    page?: number;
+    limit?: number;
+    search?: string;
+    category?: string;
+    sortBy?: string;
+    sortOrder?: string;
+  } = {}) {
     try {
-      const foods = await Food.findAll({ where: { isDeleted: false } });
+      const offset = (page - 1) * limit;
+      const where: any = { isDeleted: false };
 
-      if (!foods) {
-        logger.error("Foods not found");
-        return {
-          status: STATUS_CODES.NOT_FOUND,
-          message: "Foods not found",
-        };
+      if (search) {
+        where[Op.or] = [
+          { name: { [Op.like]: `%${search}%` } },
+          { description: { [Op.like]: `%${search}%` } },
+        ];
       }
+
+      if (category) {
+        where.category = category;
+      }
+
+      const { count, rows: foods } = await Food.findAndCountAll({
+        where,
+        limit,
+        offset,
+        order: [[sortBy, sortOrder]],
+      });
+
+      const totalPages = Math.ceil(count / limit);
+
       logger.info("Foods fetched successfully");
       return {
         status: STATUS_CODES.OK,
         message: "success",
         foods,
+        pagination: {
+          totalItems: count,
+          totalPages,
+          currentPage: page,
+          limit,
+        },
       };
     } catch (error: any) {
       logger.error(error.message);
@@ -221,7 +256,6 @@ class FoodController {
           };
         }
         findFood.slug = updatedSlugValue;
-        findFood.save({ validate: false });
       }
 
       if (file && file.data) {

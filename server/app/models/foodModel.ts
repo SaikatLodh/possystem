@@ -9,7 +9,7 @@ class Food extends Model<FoodAttributes> {
   declare price: number;
   declare category: string;
   declare image?: { publicId: string; url: string } | null;
-  declare slug?: Promise<string> | string;
+  declare slug?: string | null;
   declare numberOfOrders?: number;
   declare isDeleted?: boolean;
   declare createdAt?: Date;
@@ -58,8 +58,8 @@ Food.init(
     slug: {
       type: DataTypes.STRING,
       unique: true,
-      allowNull: false,
-      defaultValue: "",
+      allowNull: true,
+      defaultValue: null,
     },
     numberOfOrders: {
       type: DataTypes.INTEGER,
@@ -71,14 +71,7 @@ Food.init(
       allowNull: false,
       defaultValue: false,
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
+
   },
   {
     sequelize: db,

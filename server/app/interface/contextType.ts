@@ -17,7 +17,7 @@ export interface User {
 }
 
  type GraphQLContext = {
-  req: Request & { user: User };
+  req: Request & { user?: User };
   res: Response;
 };
 

@@ -4,7 +4,6 @@ export default interface TableAttributes {
   status?: "available" | "unavailable";
   capacity: number;
   isDeleted?: boolean;
-  confirmedByWaiters?: Array<string>;
   createdAt?: "createdAt";
   updatedAt?: "updatedAt";
 }

@@ -6,11 +6,18 @@ import foodController from "../../web/food/foodController.ts";
 
 export const foodResolver = {
   Query: {
-    getFoods: withAuth((_: any, args: any, context: GraphQLContext) => {
-      return foodController.getFoods();
+    getFoods: withAuth((_: any, args: {
+      page?: number;
+      limit?: number;
+      search?: string;
+      category?: string;
+      sortBy?: string;
+      sortOrder?: string;
+    }) => {
+      return foodController.getFoods(args);
     }),
     getFood: withAuth(
-      (_: any, args: { id: string }, context: GraphQLContext) => {
+      (_: any, args: { id: string }) => {
         return foodController.getFood(args.id);
       },
     ),
@@ -31,7 +38,6 @@ export const foodResolver = {
             data: string;
           };
         },
-        context: GraphQLContext,
       ) => {
         return foodController.createFood(args);
       },
@@ -52,13 +58,12 @@ export const foodResolver = {
             data: string;
           };
         },
-        context: GraphQLContext,
       ) => {
         return foodController.updateFood(args);
       },
     ),
     deleteFood: withRole([ROLES.ADMIN])(
-      (_: any, args: { id: string }, context: GraphQLContext) => {
+      (_: any, args: { id: string }) => {
         return foodController.deleteFood(args.id);
       },
     ),

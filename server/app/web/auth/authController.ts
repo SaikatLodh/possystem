@@ -739,7 +739,7 @@ class AuthController {
         };
       }
 
-      const tokens = await generateAccessAndRefreshToken(user.id);
+      const tokens = await generateAccessAndRefreshToken(user.id as string);
 
       if (!tokens || !tokens.accessToken) {
         logger.error("Failed to generate tokens");

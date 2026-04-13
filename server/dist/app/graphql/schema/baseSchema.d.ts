@@ -1,2 +1,0 @@
-export declare const baseSchema = "#graphql\n  scalar DateTime\n  scalar Upload\n\ninput FileUploadInput {\n  filename: String!\n  mimetype: String!\n  encoding: String!\n  data: String!\n}\n\n  type response {\n    status: Int!\n    message: String!\n  }\n\n  type ProfilePicture {\n    public_id: String\n    url: String\n  }\n\n  type User {\n    id: ID!\n    fullname: String!\n    email: String!\n    profilePicture: ProfilePicture\n    role: String!\n    isDeleted: Boolean!\n    createdAt: String!\n    updatedAt: String!\n  }\n\n";
-//# sourceMappingURL=baseSchema.d.ts.map

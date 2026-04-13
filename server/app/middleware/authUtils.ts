@@ -49,7 +49,7 @@ export const withRole = (allowedRoles: Role[]) => (resolver: Function) => {
   return async (parent: any, args: any, context: any, info: any) => {
     try {
       const user = await authenticateUser(context.req);
-      context.req.user = user;
+
 
       if (!user.role || !allowedRoles.includes(user.role)) {
         throw new ApiError(
@@ -57,7 +57,7 @@ export const withRole = (allowedRoles: Role[]) => (resolver: Function) => {
           STATUS_CODES.FORBIDDEN,
         );
       }
-
+      context.req.user = user;
       return await resolver(parent, args, context, info);
     } catch (error: any) {
       throw new Error(error.message || "Authorization failed");
