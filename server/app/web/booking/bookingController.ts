@@ -1,4 +1,3 @@
-import { Op } from "sequelize";
 import Booking from "../../models/bookingModel.ts";
 import STATUS_CODES from "../../config/httpStatusCode.ts";
 import logger from "../../helpers/logger.ts";
@@ -29,19 +28,6 @@ class BookingController {
         };
       }
 
-      const booking = await Booking.create({
-        tableId,
-        userId,
-      });
-
-      if (!booking) {
-        logger.error("Booking not created");
-        return {
-          status: STATUS_CODES.BAD_REQUEST,
-          message: "Booking not created",
-        };
-      }
-
       const table = await Table.findByPk(tableId);
       if (!table) {
         logger.error("Table not found");
@@ -60,7 +46,19 @@ class BookingController {
         };
       }
 
-      // Create associations manually to allow duplicates
+      const booking = await Booking.create({
+        tableId,
+        userId,
+      });
+
+      if (!booking) {
+        logger.error("Booking not created");
+        return {
+          status: STATUS_CODES.BAD_REQUEST,
+          message: "Booking not created",
+        };
+      }
+
       const bookingFoodsData = foodsId.map((foodId) => ({
         bookingId: booking.id,
         foodId,
@@ -82,27 +80,9 @@ class BookingController {
       table.status = "unavailable";
       await table.save({ validate: false });
 
-      // Increment number of orders accurately for each food item
-      // const foodCountMap: { [key: string]: number } = {};
-      // foodsId.forEach((id) => {
-      //   foodCountMap[id] = (foodCountMap[id] || 0) + 1;
-      // });
-
-      // for (const [foodId, count] of Object.entries(foodCountMap)) {
-      //   await Food.increment("numberOfOrders", {
-      //     by: count,
-      //     where: { id: foodId },
-      //   });
-      // }
-
-      await Food.increment("numberOfOrders", {
-        by: 1,
-        where: { id: { [Op.in]: foodsId } }
-      })
-
       logger.info("Booking created successfully");
       return {
-        status: STATUS_CODES.OK,
+        status: STATUS_CODES.CREATED,
         message: "Booking created successfully",
       };
     } catch (error: any) {

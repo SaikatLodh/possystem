@@ -1,19 +1,45 @@
 export const getUser = `#graphql
-query Query {
+query Foods {
   getUser {
+    status
+    message
     user {
-      fullname
       id
+      fullname
       email
+      profilePicture
       role
       isDeleted
       createdAt
       updatedAt
-      profilePicture {
-        url
-        public_id
-      }
     }
+  }
+}
+`
+
+export const updateUser = `#graphql
+mutation Mutation($fullname: String, $file: FileUploadInput) {
+  updateUser(fullname: $fullname, file: $file) {
+    message
+    status
+  }
+}
+`
+
+export const changePassword = `#graphql
+mutation Mutation($oldPassword: String!, $confirmPassword: String!, $newPassword: String!) {
+  changePassword(oldPassword: $oldPassword, confirmPassword: $confirmPassword, newPassword: $newPassword) {
+    message
+    status
+  }
+}
+`
+
+export const deleteUser = `#graphql
+mutation Mutation {
+  deleteUser {
+    status
+    message
   }
 }
 `

@@ -14,16 +14,13 @@ input FileUploadInput {
     message: String!
   }
 
-  type ProfilePicture {
-    public_id: String
-    url: String
-  }
+
 
   type User {
     id: ID!
     fullname: String!
     email: String!
-    profilePicture: ProfilePicture
+    profilePicture: String
     role: String!
     isDeleted: Boolean!
     createdAt: String!
@@ -35,7 +32,7 @@ input FileUploadInput {
     name: String!
     description: String!
     price: Int!
-    image: ProfilePicture
+    image: String
     slug: String!
     category: String!
     numberOfOrders: Int!
@@ -63,6 +60,15 @@ input FileUploadInput {
     isDeleted: Boolean!
     createdAt: String!
     updatedAt: String!
+}
+
+type CartItem {
+  id: String!
+  quantity: Int!
+  food: Food!
+  isDeleted: Boolean!
+  createdAt: String!
+  updatedAt: String!
 }
 
 `;

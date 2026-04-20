@@ -355,6 +355,13 @@ export const salads = [
 
 export const menus = [
   {
+    id: 0,
+    name: "All",
+    bgColor: "#F6B100",
+    icon: "🍽️",
+    items: [],
+  },
+  {
     id: 1,
     name: "Starters",
     bgColor: "#b73e3e",

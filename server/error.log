@@ -165,3 +165,103 @@
 {"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:34:44.840Z"}
 {"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:35:09.781Z"}
 {"level":"error","message":"Please provide bookingId, userId and amount","service":"test-service","timestamp":"2026-04-13T19:35:33.979Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:34:18.117Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:34:24.345Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:34:25.684Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:34:25.695Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:08.068Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:14.039Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:21.053Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:23.450Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:23.468Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:25.262Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:25.268Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:42.789Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:35:42.793Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:30.111Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:30.116Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:56.187Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:56.193Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:57.938Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:37:57.945Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:38:06.114Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:38:06.118Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:38:46.057Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:38:46.062Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:39:45.485Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:39:45.490Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:18.208Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:18.216Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:39.297Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:39.303Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:56.668Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:40:56.674Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:26.493Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:26.497Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:28.500Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:28.504Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:31.364Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:31.367Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:33.522Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:33.529Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:47.970Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-16T13:41:47.975Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-17T15:49:06.293Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-17T15:49:29.658Z"}
+{"level":"error","message":"Validation error: Validation isLowercase on description failed","service":"test-service","timestamp":"2026-04-18T10:14:03.552Z"}
+{"level":"error","message":"Validation error: Validation isLowercase on name failed,\nValidation error: Validation isLowercase on description failed","service":"test-service","timestamp":"2026-04-18T12:45:50.029Z"}
+{"level":"error","message":"Validation error: Validation isLowercase on name failed,\nValidation error: Validation isLowercase on description failed","service":"test-service","timestamp":"2026-04-18T12:53:48.813Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:41:53.216Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:42:23.074Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:42:23.709Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:42:35.455Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:42:36.364Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:42:59.155Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:00.240Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:00.809Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:00.976Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:01.169Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:01.348Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:01.552Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:02.302Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:02.781Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:03.259Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:03.670Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:03.831Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:04.015Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:43:04.231Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:44:45.519Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:00.586Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:01.504Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:01.716Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:01.917Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:02.125Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:02.324Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:02.528Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:02.723Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:02.926Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:03.135Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T13:58:03.347Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:10:26.562Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:10:27.583Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:11:31.962Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:11:32.870Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:11:33.037Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:11:33.247Z"}
+{"level":"error","message":"Cannot read properties of null (reading '_modelAttribute')","service":"test-service","timestamp":"2026-04-18T14:32:11.943Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:22:31.804Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:22:31.809Z"}
+{"level":"error","message":"Admin can not login","service":"test-service","timestamp":"2026-04-18T20:22:47.310Z"}
+{"level":"error","message":"Admin can not login","service":"test-service","timestamp":"2026-04-18T20:22:52.029Z"}
+{"level":"error","message":"Admin can not login","service":"test-service","timestamp":"2026-04-18T20:23:19.939Z"}
+{"level":"error","message":"Admin can not login","service":"test-service","timestamp":"2026-04-18T20:23:26.421Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:35:51.502Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:35:51.511Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:35:54.497Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:35:54.505Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:36:04.899Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-18T20:36:04.905Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:31.955Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:31.961Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:35.793Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:35.796Z"}

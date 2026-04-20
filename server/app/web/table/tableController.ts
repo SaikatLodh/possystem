@@ -44,7 +44,10 @@ class TableController {
 
   async getTables() {
     try {
-      const tables = await Table.findAll({ where: { isDeleted: false } });
+      const tables = await Table.findAll({
+        where: { isDeleted: false },
+        order: [["createdAt", "DESC"]],
+      });
 
       if (!tables) {
         logger.error("Tables not found");

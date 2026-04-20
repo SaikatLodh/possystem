@@ -5,6 +5,7 @@ import { tableResolvers } from "./tableResolver.ts";
 import { bookResolvers } from "./bookResolvers.ts";
 import { adminResolvers } from "./adminResolvers.ts";
 import { paymentResolvers } from "./paymentResolver.ts";
+import { cartItemResolver } from "./cartItemResolver.ts";
 
 export const resolvers = {
   Query: {
@@ -13,6 +14,8 @@ export const resolvers = {
     ...tableResolvers.Query,
     ...bookResolvers.Query,
     ...adminResolvers.Query,
+    ...paymentResolvers.Query,
+    ...cartItemResolver.Query,
   },
   Mutation: {
     ...authResolvers.Mutation,
@@ -21,5 +24,6 @@ export const resolvers = {
     ...tableResolvers.Mutation,
     ...bookResolvers.Mutation,
     ...paymentResolvers.Mutation,
+    ...cartItemResolver.Mutation,
   },
 };

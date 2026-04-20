@@ -1,11 +1,13 @@
 import { Navigate, useLocation } from "react-router-dom";
+import type { User } from "../interface";
 
 const Cheackauth = ({
   isAuthenticated,
+  user,
   children,
 }: {
   isAuthenticated: boolean;
-
+  user: User | null;
   children: React.ReactNode;
 }) => {
   const location = useLocation();
@@ -31,6 +33,12 @@ const Cheackauth = ({
   ) {
     return <Navigate to="/" />;
   }
+
+  if (user?.role === "customer" && location.pathname === "/") {
+    return <Navigate to="/foods" />;
+  }
+
+
 
   return <div>{children}</div>;
 };

@@ -7,8 +7,11 @@ class Payment extends Model<PaymentAttributes> {
     declare bookingId: string;
     declare userId: string;
     declare amount: number;
-    declare paymentMethod?: string;
-    declare paymentStatus?: string;
+    declare paymentMethod: "cash" | "card" | "upi";
+    declare paymentStatus?: "pending" | "paid" | "failed";
+    declare razorpayPaymentId?: string;
+    declare razorpayOrderId?: string;
+    declare razorpaySignature?: string;
     declare isDeleted?: boolean;
     declare createdAt?: Date;
     declare updatedAt?: Date;
@@ -36,14 +39,26 @@ Payment.init({
         defaultValue: 0,
     },
     paymentMethod: {
-        type: DataTypes.STRING,
-        allowNull: true,
+        type: DataTypes.ENUM("cash", "card", "upi"),
+        allowNull: false,
         defaultValue: "cash",
     },
     paymentStatus: {
-        type: DataTypes.STRING,
+        type: DataTypes.ENUM("pending", "paid", "failed"),
         allowNull: true,
         defaultValue: "pending",
+    },
+    razorpayPaymentId: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    razorpayOrderId: {
+        type: DataTypes.STRING,
+        allowNull: true,
+    },
+    razorpaySignature: {
+        type: DataTypes.STRING,
+        allowNull: true,
     },
     isDeleted: {
         type: DataTypes.BOOLEAN,

@@ -417,13 +417,13 @@ class AuthController {
         };
       }
 
-      if (checkUser.role === "admin") {
-        logger.error("Admin can not login");
-        return {
-          status: STATUS_CODES.BAD_REQUEST,
-          message: "Admin can not login",
-        };
-      }
+      // if (checkUser.role === "admin") {
+      //   logger.error("Admin can not login");
+      //   return {
+      //     status: STATUS_CODES.BAD_REQUEST,
+      //     message: "Admin can not login",
+      //   };
+      // }
 
       if (checkUser.isDeleted) {
         logger.error("User is deleted");

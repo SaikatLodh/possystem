@@ -71,7 +71,6 @@ Food.init(
       allowNull: false,
       defaultValue: false,
     },
-
   },
   {
     sequelize: db,

@@ -33,7 +33,7 @@ const Home = () => {
         <div className="flex-[2]">
           <PopularDishes />
         </div>
-        <BottomNav />
+        {/* <BottomNav /> */}
       </section>
     </>
   );

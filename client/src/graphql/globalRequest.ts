@@ -39,7 +39,7 @@ const useQlQuery = (
     return data as GraphqlQuery;
   };
 
-  const constructedKey = [queryKey, dynamicKey];
+  const constructedKey = [queryKey, dynamicKey, variables];
 
   return useQuery({
     queryKey: constructedKey,

@@ -8,17 +8,21 @@ import { persistor, store } from "./store/store.ts";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import ErrorBoundary from "./ErrorBoundery.tsx";
 import { SnackbarProvider } from "notistack";
+import RefreshToken from "./RefreshToken.tsx";
+import ServiceUnavailable from "./pages/ServiceUnavailable.tsx";
 
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ErrorBoundary fallback={<h1>Something went wrong</h1>}>
+    <ErrorBoundary fallback={<ServiceUnavailable />}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <QueryClientProvider client={queryClient}>
             <SnackbarProvider autoHideDuration={3000}>
-              <App />
+              <RefreshToken>
+                <App />
+              </RefreshToken>
             </SnackbarProvider>
           </QueryClientProvider>
         </PersistGate>

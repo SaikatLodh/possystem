@@ -12,7 +12,8 @@ getUser: userResponse!
 
 type Mutation {
 updateUser(fullname:String, file: FileUploadInput):response!
-changePassword(oldPassword: String!, confirmPassword: String!, password: String!): response!
+changePassword(oldPassword: String!, confirmPassword: String!, newPassword: String!): response!
+deleteUser: response!
 }
     
 `;

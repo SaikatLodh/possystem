@@ -5,7 +5,7 @@ import Table from "../../models/tableModel.ts";
 import User from "../../models/userModel.ts";
 import Payment from "../../models/paymentModel.ts";
 
-// 6 - 2 9 - 7 10 - 7 2 - 10
+// 6 - 2 9 - 6 10 - 7 2 - 10
 class AdminController {
 
     async dashboardData() {
@@ -14,7 +14,7 @@ class AdminController {
             // const tables = await Table.findAll();
             // const foods = await Food.findAll();
 
-            // total number of bookings
+            // total number of table bookings
             // const bookings = await Booking.findAll({
             //     attributes: [
             //         "tableId",

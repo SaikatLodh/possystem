@@ -72,6 +72,15 @@ export async function startServer(
     }),
   );
 
+  // 404 Not Found Middleware
+  app.use((req, res) => {
+    res.status(404).json({
+      status: 404,
+      message: `Cannot ${req.method} ${req.url}`,
+      error: "Not Found",
+    });
+  });
+
   const httpServer = http.createServer(app);
   return new Promise<http.Server>((resolve) => {
     httpServer.listen(port, () => {

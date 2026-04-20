@@ -1,15 +1,18 @@
+import { ROLES } from "../../config/userRoles.ts";
 import type GraphQLContext from "../../interface/contextType.ts";
-import { withAuth } from "../../middleware/authUtils.ts";
+import { withRole } from "../../middleware/authUtils.ts";
 import userController from "../../web/user/userController.ts";
 
 export const userResolver = {
   Query: {
-    getUser: withAuth((_: any, args: any, context: GraphQLContext) => {
-      return userController.getUsers(context?.req?.user?.id as string);
-    }),
+    getUser: withRole([ROLES.ADMIN, ROLES.WAITER, ROLES.CUSTOMER])(
+      (_: any, args: any, context: GraphQLContext) => {
+        return userController.getUsers(context?.req?.user?.id as string);
+      },
+    ),
   },
   Mutation: {
-    updateUser: withAuth(
+    updateUser: withRole([ROLES.ADMIN, ROLES.WAITER, ROLES.CUSTOMER])(
       (
         _: any,
         args: {
@@ -30,13 +33,13 @@ export const userResolver = {
         );
       },
     ),
-    changePassword: withAuth(
+    changePassword: withRole([ROLES.ADMIN, ROLES.WAITER, ROLES.CUSTOMER])(
       (
         _: any,
         args: {
           oldPassword: string;
           confirmPassword: string;
-          password: string;
+          newPassword: string;
         },
         context: GraphQLContext,
       ) => {
@@ -44,8 +47,13 @@ export const userResolver = {
           context?.req?.user?.id as string,
           args.oldPassword,
           args.confirmPassword,
-          args.password,
+          args.newPassword,
         );
+      },
+    ),
+    deleteUser: withRole([ROLES.ADMIN, ROLES.CUSTOMER, ROLES.WAITER])(
+      (_: any, args: any, context: GraphQLContext) => {
+        return userController.deleteUser(context?.req?.user?.id as string);
       },
     ),
   },

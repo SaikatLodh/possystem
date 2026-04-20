@@ -1,26 +1,44 @@
-
 import { ROLES } from "../../config/userRoles.ts";
-import type GraphQLContext from "../../interface/contextType.ts";
 import { withAuth, withRole } from "../../middleware/authUtils.ts";
 import foodController from "../../web/food/foodController.ts";
 
 export const foodResolver = {
   Query: {
-    getFoods: withAuth((_: any, args: {
-      page?: number;
-      limit?: number;
-      search?: string;
-      category?: string;
-      sortBy?: string;
-      sortOrder?: string;
-    }) => {
-      return foodController.getFoods(args);
-    }),
-    getFood: withAuth(
-      (_: any, args: { id: string }) => {
-        return foodController.getFood(args.id);
+    getFoods: withRole([ROLES.ADMIN, ROLES.CUSTOMER])(
+      (
+        _: any,
+        {
+          page,
+          limit,
+          search,
+          category,
+          sortBy,
+          sortOrder,
+        }: {
+          page?: number;
+          limit?: number;
+          search?: string;
+          category?: string;
+          sortBy?: string;
+          sortOrder?: string;
+        },
+      ) => {
+        return foodController.getFoods({
+          page,
+          limit,
+          search,
+          category,
+          sortBy,
+          sortOrder,
+        });
       },
     ),
+    getFood: withRole([ROLES.ADMIN, ROLES.CUSTOMER])((_: any, args: { id: string }) => {
+      return foodController.getFood(args.id);
+    }),
+    getCategoriesCount: withRole([ROLES.ADMIN, ROLES.CUSTOMER])(() => {
+      return foodController.getCategoriesCount();
+    }),
   },
   Mutation: {
     createFood: withRole([ROLES.ADMIN])(
@@ -62,10 +80,8 @@ export const foodResolver = {
         return foodController.updateFood(args);
       },
     ),
-    deleteFood: withRole([ROLES.ADMIN])(
-      (_: any, args: { id: string }) => {
-        return foodController.deleteFood(args.id);
-      },
-    ),
+    deleteFood: withRole([ROLES.ADMIN])((_: any, args: { id: string }) => {
+      return foodController.deleteFood(args.id);
+    }),
   },
 };

@@ -8,7 +8,22 @@ import UserFood from "../models/userFoodModel.ts";
 import TableCustomer from "../models/tableCustomerModel.ts";
 import TableWaiter from "../models/tableWaiterModel.ts";
 import Payment from "../models/paymentModel.ts";
+import CartItem from "../models/cartItemsModel.ts";
 
+// Booking -> Payment Association (One Booking has One Payment)
+Booking.hasOne(Payment, {
+  foreignKey: "bookingId",
+  as: "payment",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+
+Payment.belongsTo(Booking, {
+  foreignKey: "bookingId",
+  as: "booking",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
 
 // Booking -> Table Association (One Booking belongs to One Table)
 Table.hasMany(Booking, {
@@ -25,7 +40,7 @@ Booking.belongsTo(Table, {
   onUpdate: "CASCADE",
 });
 
-// Booking -> User Association (One Booking has One User) 
+// Booking -> User Association (One Booking has One User)
 // Booking.hasOne(User, {
 //   foreignKey: "userId",
 //   as: "user",
@@ -45,31 +60,14 @@ User.hasMany(Booking, {
   as: "bookings",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 Booking.belongsTo(User, {
   foreignKey: "userId",
   as: "user",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
-
-
-// Booking -> Payment Association (One Booking has One Payment)
-Booking.hasOne(Payment, {
-  foreignKey: "bookingId",
-  as: "payment",
-  onDelete: "CASCADE",
-  onUpdate: "CASCADE",
-})
-
-Payment.belongsTo(Booking, {
-  foreignKey: "bookingId",
-  as: "booking",
-  onDelete: "CASCADE",
-  onUpdate: "CASCADE",
-})
-
+});
 
 // User -> Payment Association (One User has Many Payments)
 User.hasMany(Payment, {
@@ -77,14 +75,29 @@ User.hasMany(Payment, {
   as: "payments",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 Payment.belongsTo(User, {
   foreignKey: "userId",
   as: "user",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
+
+// Food -> CartItem Association (One Food has Many CartItems)
+Food.hasMany(CartItem, {
+  foreignKey: "foodId",
+  as: "cartItems",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+
+CartItem.belongsTo(Food, {
+  foreignKey: "foodId",
+  as: "food",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
 
 // Booking -> Food Association (One Booking has Many Foods)
 Booking.belongsToMany(Food, {
@@ -97,7 +110,6 @@ Booking.belongsToMany(Food, {
   as: "foods",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-
 });
 
 Food.belongsToMany(Booking, {
@@ -123,7 +135,7 @@ Table.belongsToMany(Food, {
   as: "foods",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 Food.belongsToMany(Table, {
   through: {
@@ -135,7 +147,7 @@ Food.belongsToMany(Table, {
   as: "tables",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 // Table -> User Association (One Table has Many Users)
 Table.belongsToMany(User, {
@@ -148,8 +160,7 @@ Table.belongsToMany(User, {
   as: "waiters",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
-
+});
 
 User.belongsToMany(Table, {
   through: {
@@ -161,7 +172,7 @@ User.belongsToMany(Table, {
   as: "waiterTables",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 // Table -> Customer Association (One Table has Many Customers)
 Table.belongsToMany(User, {
@@ -174,8 +185,7 @@ Table.belongsToMany(User, {
   as: "customers",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
-
+});
 
 User.belongsToMany(Table, {
   through: {
@@ -187,7 +197,7 @@ User.belongsToMany(Table, {
   as: "customerTables",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 // User -> Food Association (One User has Many Foods)
 User.belongsToMany(Food, {
@@ -200,7 +210,7 @@ User.belongsToMany(Food, {
   as: "foods",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});
 
 Food.belongsToMany(User, {
   through: {
@@ -212,4 +222,4 @@ Food.belongsToMany(User, {
   as: "users",
   onDelete: "CASCADE",
   onUpdate: "CASCADE",
-})
+});

@@ -6,6 +6,7 @@ import { tableSchema } from "./tableSchema.ts";
 import { bookingSchema } from "./bookingSchema.ts";
 import { adminSchema } from "./adminSchema.ts";
 import { paymentSchema } from "./paymentSchema.ts";
+import { cartItemSchema } from "./cartItenSchema.ts";
 
 export const typeDefs = `#graphql
 ${baseSchema}
@@ -16,4 +17,5 @@ ${tableSchema}
 ${bookingSchema}
 ${adminSchema}
 ${paymentSchema}
+${cartItemSchema}
 `;

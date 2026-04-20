@@ -29,11 +29,25 @@ class UserController {
           message: "User not found",
         };
       }
+
+      const plainFood = user.toJSON();
+      let profilePicture = null;
+      if (plainFood.profilePicture) {
+        const imageObj =
+          typeof plainFood.profilePicture === "string"
+            ? JSON.parse(plainFood.profilePicture)
+            : plainFood.profilePicture;
+        profilePicture = imageObj.url || null;
+      }
+      const formattedFood = {
+        ...plainFood,
+        profilePicture: profilePicture,
+      };
       logger.info(`Profile fetched successfully for user: userId=${id}`);
       return {
         status: STATUS_CODES.OK,
         message: "success",
-        user,
+        user: formattedFood,
       };
     } catch (error: any) {
       logger.error(error.message);
@@ -116,14 +130,14 @@ class UserController {
     id: string,
     oldPassword: string,
     confirmPassword: string,
-    password: string,
+    newPassword: string,
   ) {
     try {
       logger.info(`Updating password for user: userId=${id}`);
 
       const { error } = updatePasswordSchema.validate({
         oldPassword,
-        password,
+        newPassword,
         confirmPassword,
       });
 
@@ -137,7 +151,7 @@ class UserController {
         };
       }
 
-      if (password !== confirmPassword) {
+      if (newPassword !== confirmPassword) {
         logger.warn(
           "Password confirmation mismatch for user: userId=${userId}",
         );
@@ -171,6 +185,24 @@ class UserController {
       return {
         status: STATUS_CODES.OK,
         message: "Password updated successfully",
+      };
+    } catch (error: any) {
+      logger.error(error.message);
+      return {
+        status: STATUS_CODES.INTERNAL_SERVER_ERROR,
+        message: error.message || "Internal Server Error",
+      };
+    }
+  }
+
+  async deleteUser(id: string) {
+    try {
+      logger.info(`Deleting user: userId=${id}`);
+      await User.update({ isDeleted: true }, { where: { id } });
+      logger.info(`User deleted successfully: userId=${id}`);
+      return {
+        status: STATUS_CODES.OK,
+        message: "User deleted successfully",
       };
     } catch (error: any) {
       logger.error(error.message);

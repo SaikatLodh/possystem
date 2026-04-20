@@ -69,7 +69,7 @@ const Orders = () => {
         } */}
         </div>
 
-        <BottomNav />
+        {/* <BottomNav /> */}
       </section>
     </>
   );

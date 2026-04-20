@@ -3,8 +3,11 @@ export interface PaymentAttributes {
     bookingId: string;
     userId: string;
     amount: number;
-    paymentMethod?: string;
-    paymentStatus?: string;
+    paymentMethod: "cash" | "card" | "upi";
+    paymentStatus?: "pending" | "paid" | "failed";
+    razorpayPaymentId?: string;
+    razorpayOrderId?: string;
+    razorpaySignature?: string;
     isDeleted?: boolean;
     createdAt?: Date;
     updatedAt?: Date;

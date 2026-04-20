@@ -111,7 +111,7 @@ export const updateFoodValidation = (
   });
 
   return schema.validate(
-    { name, description, price, category, file },
+    { id, name, description, price, category, file },
     {
       abortEarly: false,
     },

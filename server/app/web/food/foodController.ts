@@ -1,4 +1,4 @@
-import { Op } from "sequelize";
+import { col, fn, Op } from "sequelize";
 import Food from "../../models/foodModel.ts";
 import STATUS_CODES from "../../config/httpStatusCode.ts";
 import logger from "../../helpers/logger.ts";
@@ -112,6 +112,7 @@ class FoodController {
       };
     }
   }
+
   async getFoods({
     page = 1,
     limit = 10,
@@ -120,12 +121,12 @@ class FoodController {
     sortBy = "createdAt",
     sortOrder = "DESC",
   }: {
-    page?: number;
-    limit?: number;
-    search?: string;
-    category?: string;
-    sortBy?: string;
-    sortOrder?: string;
+    page?: number | undefined;
+    limit?: number | undefined;
+    search?: string | undefined;
+    category?: string | undefined;
+    sortBy?: string | undefined;
+    sortOrder?: string | undefined;
   } = {}) {
     try {
       const offset = (page - 1) * limit;
@@ -150,12 +151,27 @@ class FoodController {
       });
 
       const totalPages = Math.ceil(count / limit);
+      const formattedData = foods.map((item) => {
+        const plainItem = item.toJSON();
+        let imageUrl = null;
+        if (plainItem.image) {
+          const imageObj =
+            typeof plainItem.image === "string"
+              ? JSON.parse(plainItem.image)
+              : plainItem.image;
+          imageUrl = imageObj.url || null;
+        }
+        return {
+          ...plainItem,
+          image: imageUrl,
+        };
+      });
 
       logger.info("Foods fetched successfully");
       return {
         status: STATUS_CODES.OK,
         message: "success",
-        foods,
+        foods: formattedData,
         pagination: {
           totalItems: count,
           totalPages,
@@ -183,11 +199,61 @@ class FoodController {
           message: "Food not found",
         };
       }
+      const plainFood = food.toJSON();
+      let imageUrl = null;
+      if (plainFood.image) {
+        const imageObj =
+          typeof plainFood.image === "string"
+            ? JSON.parse(plainFood.image)
+            : plainFood.image;
+        imageUrl = imageObj.url || null;
+      }
+      const formattedFood = {
+        ...plainFood,
+        image: imageUrl,
+      };
       logger.info("Food fetched successfully");
       return {
         status: STATUS_CODES.OK,
         message: "success",
-        food,
+        food: formattedFood,
+      };
+    } catch (error: any) {
+      logger.error(error.message);
+      return {
+        status: STATUS_CODES.INTERNAL_SERVER_ERROR,
+        message: error.message || "Internal Server Error",
+      };
+    }
+  }
+
+  async getCategoriesCount() {
+    try {
+      const categories = await Food.findAll({
+        where: { isDeleted: false },
+        attributes: ["category", [fn("COUNT", col("category")), "count"]],
+        group: ["category"],
+        raw: true,
+      });
+
+      if (!categories) {
+        logger.error("Categories not found");
+        return {
+          status: STATUS_CODES.NOT_FOUND,
+          message: "Categories not found",
+        };
+      }
+
+      const formattedCategories = categories.map((cat: any) => ({
+        category: cat.category,
+        count: parseInt(cat.count, 10) || 0,
+      }));
+
+      logger.info("Categories fetched successfully");
+      return {
+        status: STATUS_CODES.OK,
+        message: "success",
+        categories: formattedCategories,
       };
     } catch (error: any) {
       logger.error(error.message);
@@ -326,7 +392,7 @@ class FoodController {
       logger.info("Food deleted successfully");
       return {
         status: STATUS_CODES.OK,
-        message: "success",
+        message: "Food deleted successfully",
       };
     } catch (error: any) {
       logger.error(error.message);
