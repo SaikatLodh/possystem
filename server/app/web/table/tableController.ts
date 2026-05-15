@@ -2,6 +2,8 @@ import Table from "../../models/tableModel.ts";
 import STATUS_CODES from "../../config/httpStatusCode.ts";
 import logger from "../../helpers/logger.ts";
 import { createTableValidation } from "../../helpers/validator/table/tablevalidation.ts";
+import Booking from "../../models/bookingModel.ts";
+import { Op } from "sequelize";
 
 class TableController {
   async createTable({
@@ -46,7 +48,6 @@ class TableController {
     try {
       const tables = await Table.findAll({
         where: { isDeleted: false },
-        order: [["createdAt", "DESC"]],
       });
 
       if (!tables) {
@@ -143,7 +144,15 @@ class TableController {
     }
   }
 
-  async toggleTableStatus({ id }: { id: string }) {
+  async toggleTableStatus({
+    id,
+    waiterId,
+    bookingId,
+  }: {
+    id: string;
+    waiterId: string;
+    bookingId: string;
+  }) {
     try {
       const table = await Table.findByPk(id);
       if (!table) {
@@ -167,6 +176,10 @@ class TableController {
             message: "Table status not toggled",
           };
         }
+        Booking.update(
+          { confirmBy: waiterId, confirmStatus: "confirmed" },
+          { where: { [Op.and]: [{ id: bookingId }, { tableId: id }] } },
+        );
       } else {
         const toggleTableStatus = await Table.update(
           { status: "available" },
@@ -180,6 +193,10 @@ class TableController {
             message: "Table status not toggled",
           };
         }
+        Booking.update(
+          { confirmBy: waiterId, confirmStatus: "not confirmed" },
+          { where: { [Op.and]: [{ id: bookingId }, { tableId: id }] } },
+        );
       }
 
       logger.info("Table status toggled successfully");

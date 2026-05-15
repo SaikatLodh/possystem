@@ -6,7 +6,6 @@ import BookingFood from "../models/bookingFoodModel.ts";
 import TableFood from "../models/tableFoodModel.ts";
 import UserFood from "../models/userFoodModel.ts";
 import TableCustomer from "../models/tableCustomerModel.ts";
-import TableWaiter from "../models/tableWaiterModel.ts";
 import Payment from "../models/paymentModel.ts";
 import CartItem from "../models/cartItemsModel.ts";
 
@@ -99,6 +98,20 @@ CartItem.belongsTo(Food, {
   onUpdate: "CASCADE",
 });
 
+User.hasMany(Booking, {
+  foreignKey: "confirmBy",
+  as: "confirmedBookings",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+
+Booking.belongsTo(User, {
+  foreignKey: "confirmBy",
+  as: "confirmer",
+  onDelete: "CASCADE",
+  onUpdate: "CASCADE",
+});
+
 // Booking -> Food Association (One Booking has Many Foods)
 Booking.belongsToMany(Food, {
   through: {
@@ -150,29 +163,29 @@ Food.belongsToMany(Table, {
 });
 
 // Table -> User Association (One Table has Many Users)
-Table.belongsToMany(User, {
-  through: {
-    model: TableWaiter,
-    unique: false,
-  },
-  foreignKey: "tableId",
-  otherKey: "userId",
-  as: "waiters",
-  onDelete: "CASCADE",
-  onUpdate: "CASCADE",
-});
+// Table.belongsToMany(User, {
+//   through: {
+//     model: TableWaiter,
+//     unique: false,
+//   },
+//   foreignKey: "tableId",
+//   otherKey: "userId",
+//   as: "waiters",
+//   onDelete: "CASCADE",
+//   onUpdate: "CASCADE",
+// });
 
-User.belongsToMany(Table, {
-  through: {
-    model: TableWaiter,
-    unique: false,
-  },
-  foreignKey: "userId",
-  otherKey: "tableId",
-  as: "waiterTables",
-  onDelete: "CASCADE",
-  onUpdate: "CASCADE",
-});
+// User.belongsToMany(Table, {
+//   through: {
+//     model: TableWaiter,
+//     unique: false,
+//   },
+//   foreignKey: "userId",
+//   otherKey: "tableId",
+//   as: "waiterTables",
+//   onDelete: "CASCADE",
+//   onUpdate: "CASCADE",
+// });
 
 // Table -> Customer Association (One Table has Many Customers)
 Table.belongsToMany(User, {

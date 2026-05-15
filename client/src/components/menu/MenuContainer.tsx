@@ -82,7 +82,7 @@ const MenuContainer = ({ cartItems, categoriesCountData }: { cartItems: CartItem
   };
   return (
     <>
-      <div className="grid grid-cols-4 gap-4 px-10 py-4 w-[100%]">
+      <div className="grid grid-cols-4 gap-4 px-10 py-4 w-[100%] overflow-y-scroll scrollbar-hide">
         {menus.map((menu) => {
           return (
             <div
@@ -128,7 +128,7 @@ const MenuContainer = ({ cartItems, categoriesCountData }: { cartItems: CartItem
                 name={item?.name || ""}
                 price={item?.price || 0}
                 category={item?.category || ""}
-                image={item?.image || "/assets/food.png"} // Demonstration asset from generation
+                image={item?.image || "/assets/food.png"}
                 onAdd={(id) => handleAddToCart(id)}
                 onEdit={(id) => handleEdit(id)}
                 onDelete={openDeleteModal}

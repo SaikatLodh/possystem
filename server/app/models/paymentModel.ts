@@ -3,72 +3,75 @@ import db from "../config/db.ts";
 import type { PaymentAttributes } from "../interface/paymentInterface.ts";
 
 class Payment extends Model<PaymentAttributes> {
-    declare id?: string;
-    declare bookingId: string;
-    declare userId: string;
-    declare amount: number;
-    declare paymentMethod: "cash" | "card" | "upi";
-    declare paymentStatus?: "pending" | "paid" | "failed";
-    declare razorpayPaymentId?: string;
-    declare razorpayOrderId?: string;
-    declare razorpaySignature?: string;
-    declare isDeleted?: boolean;
-    declare createdAt?: Date;
-    declare updatedAt?: Date;
+  declare id?: string;
+  declare bookingId: string;
+  declare userId: string;
+  declare amount: number;
+  declare paymentMethod: "cash" | "online";
+  declare paymentStatus?: "pending" | "paid" | "failed";
+  declare razorpayPaymentId?: string;
+  declare razorpayOrderId?: string;
+  declare razorpaySignature?: string;
+  declare isDeleted?: boolean;
+  declare createdAt?: Date;
+  declare updatedAt?: Date;
 }
 
-Payment.init({
+Payment.init(
+  {
     id: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
-        primaryKey: true,
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4,
+      primaryKey: true,
     },
     bookingId: {
-        type: DataTypes.UUID,
-        allowNull: false,
-        defaultValue: "",
+      type: DataTypes.UUID,
+      allowNull: false,
+      defaultValue: "",
     },
     userId: {
-        type: DataTypes.UUID,
-        allowNull: false,
-        defaultValue: "",
+      type: DataTypes.UUID,
+      allowNull: false,
+      defaultValue: "",
     },
     amount: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false,
-        defaultValue: 0,
+      type: DataTypes.DECIMAL(10, 2),
+      allowNull: false,
+      defaultValue: 0,
     },
     paymentMethod: {
-        type: DataTypes.ENUM("cash", "card", "upi"),
-        allowNull: false,
-        defaultValue: "cash",
+      type: DataTypes.ENUM("cash", "online"),
+      allowNull: false,
+      defaultValue: "cash",
     },
     paymentStatus: {
-        type: DataTypes.ENUM("pending", "paid", "failed"),
-        allowNull: true,
-        defaultValue: "pending",
+      type: DataTypes.ENUM("pending", "paid", "failed"),
+      allowNull: true,
+      defaultValue: "pending",
     },
     razorpayPaymentId: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     razorpayOrderId: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     razorpaySignature: {
-        type: DataTypes.STRING,
-        allowNull: true,
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     isDeleted: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false,
-        defaultValue: false,
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
     },
-}, {
+  },
+  {
     sequelize: db,
     modelName: "Payment",
-    timestamps: true
-})
+    timestamps: true,
+  },
+);
 
-export default Payment
+export default Payment;

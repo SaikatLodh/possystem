@@ -1,7 +1,8 @@
-import React from "react";
-import { popularDishes } from "../../utils/Data";
 
-const PopularDishes = () => {
+import { popularDishes } from "../../utils/Data";
+import type { GraphqlQuery } from "../../interface";
+
+const PopularDishes = ({ data }: { data: GraphqlQuery | undefined }) => {
   return (
     <>
       <div className="mt-6 pr-6">
@@ -16,20 +17,20 @@ const PopularDishes = () => {
           </div>
 
           <div className="overflow-y-scroll h-[680px] scrollbar-hide">
-            {popularDishes.map((dish) => {
+            {data?.dashboardData.data.popularDishes && data?.dashboardData.data.popularDishes.map((dish, index) => {
               return (
                 <div
-                  key={dish.id}
+                  key={index}
                   className="flex items-center gap-4 bg-[#1f1f1f] rounded-[15px] px-6 py-4 mt-4 mx-6"
                 >
                   <h1 className="text-[#f5f5f5] font-bold text-xl mr-4">
-                    {dish.id < 10 ? `0${dish.id}` : dish.id}
+                    {index < 10 ? `0${index + 1}` : index + 1}
                   </h1>
-                  {/* <img
+                  <img
                     src={dish.image}
                     alt={dish.name}
                     className="w-[50px] h-[50px] rounded-full"
-                  /> */}
+                  />
                   <div>
                     <h1 className="text-[#f5f5f5] font-semibold tracking-wide">
                       {dish.name}

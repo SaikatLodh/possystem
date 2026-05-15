@@ -46,7 +46,7 @@ export const formatDate = (date: Date) => {
 
 export const formatDateAndTime = (date: Date) => {
   const dateAndTime = new Date(date).toLocaleString("en-US", {
-    month: "long",
+    month: "short",
     day: "2-digit",
     year: "numeric",
     hour: "2-digit",

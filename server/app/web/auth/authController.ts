@@ -343,12 +343,17 @@ class AuthController {
         };
       }
 
-      const checkEmail = await User.findOne({ where: { email } });
-      if (checkEmail) {
-        logger.error("Email already exists");
+      const checkUser = await User.findOne({
+        where: {
+          [Op.or]: [{ email: email }, { number: number }],
+        },
+      });
+
+      if (checkUser) {
+        logger.error("Email or phone number already exists");
         return {
           status: STATUS_CODES.BAD_REQUEST,
-          message: "Email already exists",
+          message: "Email or phone number already exists",
         };
       }
 

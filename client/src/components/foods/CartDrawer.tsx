@@ -60,6 +60,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartData, isLo
     );
   };
 
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -174,14 +175,14 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ isOpen, onClose, cartData, isLo
                   <span className="text-[#F6B100]">₹{subtotal}</span>
                 </div>
               </div>
-
-              <button
-                disabled={cartItems.length === 0}
-                className="w-full py-4 bg-[#F6B100] hover:bg-[#fdc003] text-[#1a1a1a] font-bold rounded-2xl shadow-lg shadow-[#F6B100]/10 transition-all cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed disabled:shadow-none"
-              >
-                <Link to="/tables">Select Your Table</Link>
-              </button>
-
+              <Link to="/tables">
+                <button
+                  disabled={cartItems.length === 0}
+                  className="w-full py-4 bg-[#F6B100] hover:bg-[#fdc003] text-[#1a1a1a] font-bold rounded-2xl shadow-lg shadow-[#F6B100]/10 transition-all cursor-pointer disabled:opacity-20 disabled:cursor-not-allowed disabled:shadow-none"
+                >
+                  Select Your Table
+                </button>
+              </Link>
               <button
                 onClick={onClose}
                 className="w-full py-4 bg-white/5 hover:bg-white/10 text-[#adaaaa] font-bold rounded-2xl transition-all cursor-pointer border border-white/5"

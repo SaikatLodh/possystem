@@ -20,6 +20,7 @@ input FileUploadInput {
     id: ID!
     fullname: String!
     email: String!
+    number: String!
     profilePicture: String
     role: String!
     isDeleted: Boolean!
@@ -54,6 +55,8 @@ input FileUploadInput {
 
   type Booking {
     id: String!
+    paymentStatus: String!
+    confirmStatus: String!
     table: Table!
     foods: [Food!]!
     user: User!
@@ -71,4 +74,14 @@ type CartItem {
   updatedAt: String!
 }
 
+type Payment {
+  id: String!
+  amount: Float!
+  paymentMethod: String!
+  paymentStatus: String!
+  createdAt: String!
+  updatedAt: String!
+  user: User!
+  booking: Booking!
+}
 `;

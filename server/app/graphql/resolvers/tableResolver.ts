@@ -23,8 +23,12 @@ export const tableResolvers = {
       return tableController.deleteTable(args);
     }),
     toggleTableStatus: withRole([ROLES.ADMIN, ROLES.WAITER])(
-      (_: any, args: { id: string }) => {
-        return tableController.toggleTableStatus(args);
+      (_: any, {
+        id,
+        waiterId,
+        bookingId,
+      }: { id: string; waiterId: string; bookingId: string }) => {
+        return tableController.toggleTableStatus({ id, waiterId, bookingId });
       },
     ),
   },

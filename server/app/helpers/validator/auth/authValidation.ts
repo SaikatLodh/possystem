@@ -3,7 +3,7 @@ import Joi from "joi";
 export const sendOtpValidation = (data: { email: string }) => {
   const schema = Joi.object({
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .required()
       .trim()
       .messages({
@@ -11,8 +11,6 @@ export const sendOtpValidation = (data: { email: string }) => {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
   });
 
@@ -22,7 +20,7 @@ export const sendOtpValidation = (data: { email: string }) => {
 export const validateOtpValidation = (data: { email: string; otp: number }) => {
   const schema = Joi.object({
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .required()
       .trim()
       .messages({
@@ -30,8 +28,6 @@ export const validateOtpValidation = (data: { email: string; otp: number }) => {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
     otp: Joi.number().integer().min(1000).max(9999).required().messages({
       "number.integer": "OTP must be a number value",
@@ -59,7 +55,7 @@ export const registerValidation = (data: {
       "string.max": "Full name must be at most 50 characters long",
     }),
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .required()
       .trim()
       .messages({
@@ -67,8 +63,6 @@ export const registerValidation = (data: {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
     password: Joi.string().required().trim().min(6).max(30).messages({
       "string.base": "Password must be a text value",
@@ -98,7 +92,7 @@ export const loginValidation = (data: {
 }) => {
   const schema = Joi.object({
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .optional()
       .trim()
       .messages({
@@ -106,8 +100,6 @@ export const loginValidation = (data: {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
     password: Joi.string().required().trim().min(6).max(30).messages({
       "string.base": "Password must be a text value",
@@ -130,7 +122,7 @@ export const loginValidation = (data: {
 export const forgotsendemailValidation = (data: { email: string }) => {
   const schema = Joi.object({
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .required()
       .trim()
       .messages({
@@ -138,8 +130,6 @@ export const forgotsendemailValidation = (data: { email: string }) => {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
   });
   return schema.validate(data, { abortEarly: false }); // abortEarly=false returns all errors
@@ -208,7 +198,7 @@ export const facebookSignupValidation = (data: {
       "string.max": "Name must be at most 50 characters long",
     }),
     email: Joi.string()
-      .email({ minDomainSegments: 2, tlds: { allow: ["com", "net", "in"] } })
+      .email({ minDomainSegments: 2 })
       .required()
       .trim()
       .messages({
@@ -216,8 +206,6 @@ export const facebookSignupValidation = (data: {
         "string.empty": "Email is required",
         "string.email": "Please enter a valid email address",
         "any.required": "Email field cannot be empty",
-        "string.tlds":
-          "Email must end with a valid domain (e.g., .com, .net, .in)",
       }),
     id: Joi.string().required().trim().messages({
       "string.base": "ID must be a text value",

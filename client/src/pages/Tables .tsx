@@ -7,14 +7,20 @@ import { TABLES } from "../tanstackKeys";
 import { getAllTables } from "../graphql/query/table";
 import TableModal from "../components/table/TableModal";
 import DeleteTableModal from "../components/table/DeleteTableModal";
+import BookingModal from "../components/table/BookingModal";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useAppSelector } from "../store/hook";
+import { useNavigate } from "react-router-dom";
 
 const schema = z.object({
-  tableNumber: z.number({ message: "Table number is required" }).min(1, "Table number is required"),
-  capacity: z.number({ message: "Capacity must be a number" }).min(1, "Capacity must be at least 1"),
+  tableNumber: z
+    .number({ message: "Table number is required" })
+    .min(1, "Table number is required"),
+  capacity: z
+    .number({ message: "Capacity must be a number" })
+    .min(1, "Capacity must be at least 1"),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -22,14 +28,30 @@ const Tables = () => {
   const [status, setStatus] = useState("all");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editTableId, setEditTableId] = useState<string | null>(null);
-  const [tableToDelete, setTableToDelete] = useState<{ id: string, name: number } | null>(null);
+  const [tableToDelete, setTableToDelete] = useState<{
+    id: string;
+    name: number;
+  } | null>(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
+  const [tableToBook, setTableToBook] = useState<{
+    id: string;
+    name: number;
+  } | null>(null);
+  const [tableStatus, setTableStatus] = useState<string>("")
   const { user } = useAppSelector((state) => state.auth);
+  const navigate = useNavigate();
+
   useEffect(() => {
     document.title = "POS | Tables";
   }, []);
 
   const { data: resData, isLoading } = useQlQuery(TABLES, getAllTables);
+
+  const filteredTables = resData?.getTables.tables.filter((table) => {
+    if (status === "all") return table;
+    if (status === "booked") return table.status === "unavailable";
+  });
 
   const {
     register,
@@ -45,21 +67,27 @@ const Tables = () => {
     setIsModalOpen(true);
   };
 
+
   const openEditModal = (id: string, name: number, seats: number) => {
+    setIsModalOpen(true);
     setEditTableId(id);
     reset({
       tableNumber: name,
       capacity: seats,
     });
-    setIsModalOpen(true);
-  };
 
+
+  };
   const openDeleteModal = (id: string, name: number) => {
     setTableToDelete({ id, name });
     setIsDeleteModalOpen(true);
   };
 
-
+  const handleTableClick = (id: string, name: number, status: string) => {
+    setTableToBook({ id, name });
+    setTableStatus(status);
+    setIsBookingModalOpen(true);
+  };
 
   return (
     <>
@@ -97,10 +125,12 @@ const Tables = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 gap-3 px-16 py-4 h-[750px] overflow-y-scroll scrollbar-hide">
+        <div className="grid grid-cols-5 gap-3 px-16 py-4  overflow-y-scroll scrollbar-hide">
           {isLoading
-            ? Array.from({ length: 15 }).map((_, i) => <TableSkeleton key={i} />)
-            : resData?.getTables.tables.map((table) => {
+            ? Array.from({ length: 15 }).map((_, i) => (
+              <TableSkeleton key={i} />
+            ))
+            : filteredTables?.map((table) => {
               return (
                 <TableCard
                   key={table.id}
@@ -111,13 +141,12 @@ const Tables = () => {
                   seats={table.capacity}
                   onEdit={openEditModal}
                   onDelete={openDeleteModal}
+                  onClick={handleTableClick}
                   user={user}
                 />
               );
             })}
         </div>
-
-
 
         <TableModal
           register={register}
@@ -134,6 +163,14 @@ const Tables = () => {
           setIsDeleteModalOpen={setIsDeleteModalOpen}
           tableToDelete={tableToDelete}
           setTableToDelete={setTableToDelete}
+        />
+        <BookingModal
+          isModalOpen={isBookingModalOpen}
+          setIsModalOpen={setIsBookingModalOpen}
+          tableToBook={tableToBook}
+          setTableToBook={setTableToBook}
+          tableStatus={tableStatus}
+
         />
       </section>
     </>

@@ -5,21 +5,20 @@ import { useAppSelector } from "./store/hook";
 import MainWrapper from "./pages/MainWrapper";
 import Profile from "./pages/Profile";
 
-
 const Auth = lazy(() => import("./pages/Auth"));
 const LogIn = lazy(() => import("./components/auth/LogIn"));
 const Register = lazy(() => import("./components/auth/Register"));
 const ForgotSendMail = lazy(() => import("./components/auth/ForgotSendMail"));
 const ForgotPassword = lazy(() => import("./components/auth/ForgotPassword"));
 const Home = lazy(() => import("./pages/Home"));
-const Foods = lazy(() => import("./pages/Foods"))
+const Foods = lazy(() => import("./pages/Foods"));
 const Orders = lazy(() => import("./pages/Orders "));
 const Tables = lazy(() => import("./pages/Tables "));
 const Menu = lazy(() => import("./pages/Menu"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
+const Waiter = lazy(() => import("./pages/Waiter"));
 const ServiceUnavailable = lazy(() => import("./pages/ServiceUnavailable"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-
 
 import Loading from "./components/shared/Loading";
 
@@ -48,9 +47,14 @@ function App() {
                 element={<ForgotPassword />}
               />
             </Route>
-            <Route path="/" element={<Cheackauth isAuthenticated={isAuthenticated} user={user}>
-              <MainWrapper />
-            </Cheackauth>}>
+            <Route
+              path="/"
+              element={
+                <Cheackauth isAuthenticated={isAuthenticated} user={user}>
+                  <MainWrapper />
+                </Cheackauth>
+              }
+            >
               <Route
                 index
                 element={
@@ -92,16 +96,27 @@ function App() {
                   </Cheackauth>
                 }
               />
-              <Route path="/profile" element={
-                <Cheackauth isAuthenticated={isAuthenticated} user={user}>
-                  <Profile />
-                </Cheackauth>
-              } />
+              <Route
+                path="/profile"
+                element={
+                  <Cheackauth isAuthenticated={isAuthenticated} user={user}>
+                    <Profile />
+                  </Cheackauth>
+                }
+              />
               <Route
                 path="/dashboard"
                 element={
                   <Cheackauth isAuthenticated={isAuthenticated} user={user}>
                     <Dashboard />
+                  </Cheackauth>
+                }
+              />
+              <Route
+                path="/waiter"
+                element={
+                  <Cheackauth isAuthenticated={isAuthenticated} user={user}>
+                    <Waiter />
                   </Cheackauth>
                 }
               />

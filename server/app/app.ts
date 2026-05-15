@@ -12,6 +12,7 @@ import { seedUsers } from "./seedUsers.ts";
 import { seedTables } from "./seedTables.ts";
 import { seedFoods } from "./seedFoods.ts";
 import { seedBookings } from "./seedBookings.ts";
+import User from "./models/userModel.ts";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -53,12 +54,27 @@ export function createApp() {
   // seedTables()
   // seedFoods()
   // seedBookings()
+
+
   return app;
 }
 
 export async function startServer(
   port: number = process.env.PORT ? Number(process.env.PORT) : 8000,
 ): Promise<http.Server> {
+  // const users = await User.findAll({
+  //   attributes: [
+  //     "id",
+  //     "fullname",
+  //     "email",
+  //     "number",
+  //     "role",
+  //     "isDeleted",
+  //     "createdAt",
+  //     "updatedAt",
+  //   ],
+  // });
+  // console.log(JSON.parse(JSON.stringify(users)))
   const app = createApp();
 
   const graphqlServer = connectGraphql();

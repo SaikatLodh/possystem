@@ -23,6 +23,7 @@ export const resolvers = {
     ...foodResolver.Mutation,
     ...tableResolvers.Mutation,
     ...bookResolvers.Mutation,
+    ...adminResolvers.Mutation,
     ...paymentResolvers.Mutation,
     ...cartItemResolver.Mutation,
   },

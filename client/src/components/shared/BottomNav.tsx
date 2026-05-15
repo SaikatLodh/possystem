@@ -1,9 +1,7 @@
 
-import { BiSolidDish } from "react-icons/bi";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaUserTie } from "react-icons/fa";
 import { MdOutlineReorder, MdTableBar } from "react-icons/md";
 import { useLocation, useNavigate } from "react-router-dom";
-
 import { CgProfile } from "react-icons/cg";
 import { IoFastFoodSharp } from "react-icons/io5";
 import { useAppSelector } from "../../store/hook";
@@ -12,8 +10,6 @@ const BottomNav = () => {
   const navigate = useNavigate();
   const location = useLocation();
   // const dispatch = useDispatch();
-
-
   const isActive = (path: string) => location.pathname === path;
   const { user } = useAppSelector((state) => state.auth);
 
@@ -31,25 +27,29 @@ const BottomNav = () => {
             <FaHome className="inline mr-2" size={20} /> <p>Home</p>
           </button>
         )}
+        {user?.role !== "waiter" && (
+          <>
+            <button
+              onClick={() => navigate("/foods")}
+              className={`flex items-center justify-center font-bold ${isActive("/foods")
+                ? "text-[#f5f5f5] bg-[#343434]"
+                : "text-[#ababab]"
+                } w-[300px] rounded-[20px] cursor-pointer`}
+            >
+              <IoFastFoodSharp className="inline mr-2" size={20} /> <p>Foods</p>
+            </button>
+            <button
+              onClick={() => navigate("/tables")}
+              className={`flex items-center justify-center font-bold ${isActive("/tables")
+                ? "text-[#f5f5f5] bg-[#343434]"
+                : "text-[#ababab]"
+                } w-[300px] rounded-[20px] cursor-pointer`}
+            >
+              <MdTableBar className="inline mr-2" size={20} /> <p>Tables</p>
+            </button>
+          </>
+        )}
 
-        <button
-          onClick={() => navigate("/foods")}
-          className={`flex items-center justify-center font-bold ${isActive("/foods")
-            ? "text-[#f5f5f5] bg-[#343434]"
-            : "text-[#ababab]"
-            } w-[300px] rounded-[20px] cursor-pointer`}
-        >
-          <IoFastFoodSharp className="inline mr-2" size={20} /> <p>Foods</p>
-        </button>
-        <button
-          onClick={() => navigate("/tables")}
-          className={`flex items-center justify-center font-bold ${isActive("/tables")
-            ? "text-[#f5f5f5] bg-[#343434]"
-            : "text-[#ababab]"
-            } w-[300px] rounded-[20px] cursor-pointer`}
-        >
-          <MdTableBar className="inline mr-2" size={20} /> <p>Tables</p>
-        </button>
         <button
           onClick={() => navigate("/orders")}
           className={`flex items-center justify-center font-bold ${isActive("/orders")
@@ -60,7 +60,21 @@ const BottomNav = () => {
           <MdOutlineReorder className="inline mr-2" size={20} /> <p>Orders</p>
         </button>
 
-        <button className="flex items-center justify-center font-bold text-[#ababab] w-[300px] cursor-pointer" onClick={() => navigate("/profile")}>
+        {user?.role === "waiter" || user?.role === "admin" && (
+          <button
+            onClick={() => navigate("/waiter")}
+            className={`flex items-center justify-center font-bold ${isActive("/waiter") ? "text-[#f5f5f5] bg-[#343434]" : "text-[#ababab]"
+              } w-[300px] rounded-[20px] cursor-pointer`}
+          >
+            <FaUserTie className="inline mr-2" size={20} /> <p>Waiter</p>
+          </button>
+        )}
+
+        <button
+          onClick={() => navigate("/profile")}
+          className={`flex items-center justify-center font-bold ${isActive("/profile") ? "text-[#f5f5f5] bg-[#343434]" : "text-[#ababab]"
+            } w-[300px] rounded-[20px] cursor-pointer`}
+        >
           <CgProfile className="inline mr-2" size={20} /> <p>Profile</p>
         </button>
 

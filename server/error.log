@@ -265,3 +265,70 @@
 {"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:31.961Z"}
 {"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:35.793Z"}
 {"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-19T11:10:35.796Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-22T15:07:29.334Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-22T15:07:29.339Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-22T15:08:16.541Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-22T15:08:16.543Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-22T15:19:06.383Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-22T15:19:06.386Z"}
+{"level":"error","message":"Unknown column 'paymentStatus' in 'field list'","service":"test-service","timestamp":"2026-04-22T19:35:32.760Z"}
+{"level":"error","message":"Unknown column 'paymentStatus' in 'field list'","service":"test-service","timestamp":"2026-04-22T19:35:36.692Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-24T11:06:52.198Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T11:45:18.752Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T11:46:01.486Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T11:46:28.372Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T11:46:39.233Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:06:07.103Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T12:06:09.384Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T12:06:09.392Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:09:34.110Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:10:48.612Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T12:40:04.593Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T12:40:04.606Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:42:15.424Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:42:56.095Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:47:25.558Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:52:28.514Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:59:28.193Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:59:29.582Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T12:59:30.600Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T13:03:10.390Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-04-24T13:03:10.411Z"}
+{"level":"error","message":"notNull Violation: User.fullname cannot be null","service":"test-service","timestamp":"2026-04-24T18:13:22.693Z"}
+{"level":"error","message":"notNull Violation: User.fullname cannot be null","service":"test-service","timestamp":"2026-04-24T18:24:15.111Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T18:46:39.841Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T18:46:43.777Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T18:47:18.934Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T19:03:49.017Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T19:55:33.415Z"}
+{"level":"error","message":"Validation error","service":"test-service","timestamp":"2026-04-24T19:55:34.784Z"}
+{"level":"error","message":"Table 'possystem.users' doesn't exist","service":"test-service","timestamp":"2026-04-24T20:09:50.075Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-24T20:17:59.643Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-24T20:17:59.650Z"}
+{"level":"error","message":"Unknown database 'possystem'","service":"test-service","timestamp":"2026-04-25T20:39:55.085Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-26T13:27:46.546Z"}
+{"level":"error","message":"User not found","service":"test-service","timestamp":"2026-04-26T13:27:46.554Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-26T14:28:14.180Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-04-26T14:28:14.185Z"}
+{"level":"error","message":"Please provide all the details","service":"test-service","timestamp":"2026-04-26T18:45:12.079Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-04-26T19:04:55.934Z"}
+{"level":"error","message":"Please provide all the details","service":"test-service","timestamp":"2026-04-27T13:01:05.616Z"}
+{"level":"error","message":"Please provide all the details","service":"test-service","timestamp":"2026-04-27T13:02:01.700Z"}
+{"level":"error","message":"Payment already done","service":"test-service","timestamp":"2026-04-27T18:45:51.589Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:44:38.972Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:44:58.906Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:45:05.930Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:45:10.700Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:45:42.000Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:46:40.817Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:47:07.350Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T18:47:15.417Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T19:20:05.010Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T19:20:33.296Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T19:20:36.142Z"}
+{"level":"error","message":"\"undefined\" is not valid JSON","service":"test-service","timestamp":"2026-04-28T19:22:16.917Z"}
+{"level":"error","message":"Password is incorrect","service":"test-service","timestamp":"2026-04-28T19:39:11.630Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-08T14:49:47.474Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-08T14:49:47.483Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-08T15:00:38.685Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-08T15:00:49.239Z"}

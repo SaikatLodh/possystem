@@ -15,7 +15,7 @@ type Mutation {
 createTable(tableNumber: Int!, capacity: Int! ): response!
 updateTable(tableNumber: Int!, capacity: Int! , id: ID!): response!
 deleteTable(id: ID!): response!
-toggleTableStatus(id: ID!): response!
+toggleTableStatus(id: ID!, waiterId: String, bookingId: String): response!
 }
 
 `;

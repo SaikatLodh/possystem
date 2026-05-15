@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { enqueueSnackbar } from "notistack";
-import { useNavigate } from "react-router-dom";
 import { useQlMutation } from "../../graphql/globalRequest";
 import { login } from "../../graphql/query/auth";
 import Cookies from "js-cookie";
@@ -30,7 +29,7 @@ const loginSchema = z.object({
 type LoginFormData = z.infer<typeof loginSchema>;
 
 const LogIn = () => {
-  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -50,7 +49,7 @@ const LogIn = () => {
       onSuccess: (res) => {
         if (res.logIn.status === 200 || res.logIn.status === 201) {
           enqueueSnackbar(res.logIn.message, { variant: "success" });
-          navigate("/");
+          window.location.href = "/";
           localStorage.setItem("accessToken", res.logIn.accessToken);
           localStorage.setItem("refreshToken", res.logIn.refreshToken);
           Cookies.set("accessToken", res.logIn.accessToken, {

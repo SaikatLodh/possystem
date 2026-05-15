@@ -101,6 +101,7 @@ class BookingController {
           {
             model: Table,
             as: "table",
+            attributes: ["id", "tableNumber", "capacity", "status"],
           },
           {
             model: Food,
@@ -122,6 +123,7 @@ class BookingController {
             attributes: ["id", "fullname", "email", "role", "profilePicture"],
           },
         ],
+        order: [["createdAt", "DESC"]],
       });
 
       if (!bookings) {
@@ -132,10 +134,35 @@ class BookingController {
         };
       }
       logger.info("Bookings fetched successfully");
+      const plainBookings = JSON.parse(JSON.stringify(bookings)).map(
+        (b: any) => ({
+          ...b,
+          foods: b.foods?.map((food: any) => {
+            let imageUrl = food.image;
+            if (typeof food.image === "string") {
+              try {
+                const parsed = JSON.parse(food.image);
+                imageUrl = parsed.url || food.image;
+              } catch (error) {
+                // keep as is if not a valid JSON string
+              }
+            } else if (food.image && food.image.url) {
+              imageUrl = food.image.url;
+            }
+            return {
+              ...food,
+              image: imageUrl,
+            };
+          }),
+          createdAt: new Date(b.createdAt).toISOString(),
+          updatedAt: new Date(b.updatedAt).toISOString(),
+        }),
+      );
+
       return {
         status: STATUS_CODES.OK,
         message: "success",
-        bookings,
+        bookings: plainBookings,
       };
     } catch (error: any) {
       logger.error(error.message);
@@ -149,9 +176,6 @@ class BookingController {
   async geetBooking({ id }: { id: string }) {
     try {
       const booking = await Booking.findByPk(id, {
-        attributes: {
-          exclude: ["tableId"],
-        },
         include: [
           {
             model: Table,
@@ -188,6 +212,113 @@ class BookingController {
       }
 
       logger.info("Bookings fetched successfully");
+      return {
+        status: STATUS_CODES.OK,
+        message: "success",
+        booking,
+      };
+    } catch (error: any) {
+      logger.error(error.message);
+      return {
+        status: STATUS_CODES.INTERNAL_SERVER_ERROR,
+        message: error.message || "Internal Server Error",
+      };
+    }
+  }
+
+  async getUserBookings({ userId }: { userId: string }) {
+    try {
+      const bookings = await Booking.findAll({
+        where: { userId: userId },
+        attributes: {
+          exclude: ["tableId", "userId"],
+        },
+        include: [
+          {
+            model: Table,
+            as: "table",
+            attributes: ["id", "tableNumber", "capacity", "status"],
+          },
+          {
+            model: Food,
+            as: "foods",
+            attributes: ["id", "name", "price", "description", "image", "category"],
+            through: { attributes: [] }, // Exclude join table columns
+          },
+          {
+            model: User,
+            as: "user",
+            attributes: ["id", "fullname", "email", "role", "profilePicture"],
+          },
+        ],
+        order: [["createdAt", "DESC"]],
+      });
+      if (!bookings) {
+        logger.error("Bookings not found");
+        return {
+          status: STATUS_CODES.NOT_FOUND,
+          message: "Bookings not found",
+        };
+      }
+      logger.info("Bookings fetched successfully");
+      const plainBookings = JSON.parse(JSON.stringify(bookings)).map(
+        (b: any) => ({
+          ...b,
+          foods: b.foods?.map((food: any) => {
+            let imageUrl = food.image;
+            if (typeof food.image === "string") {
+              try {
+                const parsed = JSON.parse(food.image);
+                imageUrl = parsed.url || food.image;
+              } catch (error) {
+                // keep as is if not a valid JSON string
+              }
+            } else if (food.image && food.image.url) {
+              imageUrl = food.image.url;
+            }
+            return {
+              ...food,
+              image: imageUrl,
+            };
+          }),
+          createdAt: new Date(b.createdAt).toISOString(),
+          updatedAt: new Date(b.updatedAt).toISOString(),
+        }),
+      );
+
+      return {
+        status: STATUS_CODES.OK,
+        message: "success",
+        bookings: plainBookings,
+      };
+    } catch (error: any) {
+      logger.error(error.message);
+      return {
+        status: STATUS_CODES.INTERNAL_SERVER_ERROR,
+        message: error.message || "Internal Server Error",
+      };
+    }
+  }
+
+  async updateBooking({
+    id,
+    confirmStatus,
+  }: {
+    id: string;
+    confirmStatus: "confirmed" | "not confirmed" | "pending";
+  }) {
+    try {
+      const booking = await Booking.findByPk(id);
+      if (!booking) {
+        logger.error("Booking not found");
+        return {
+          status: STATUS_CODES.NOT_FOUND,
+          message: "Booking not found",
+        };
+      }
+      booking.confirmStatus = confirmStatus;
+      await booking.save({ validate: false });
+      logger.info("Booking updated successfully");
       return {
         status: STATUS_CODES.OK,
         message: "success",

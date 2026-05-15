@@ -43,7 +43,7 @@ query Query {
 
 }`
 
-const getTableById = `#graphql
+export const getTableById = `#graphql
 query Query($getTableByIdId: ID!) {
   getTableById(id: $getTableByIdId) {
     table {
@@ -58,3 +58,12 @@ query Query($getTableByIdId: ID!) {
     status
   }
 }`
+
+export const toggleTableStatus = `#graphql
+mutation Mutation($toggleTableStatusId: ID!, $waiterId: String, $bookingId: String) {
+  toggleTableStatus(id: $toggleTableStatusId, waiterId: $waiterId, bookingId: $bookingId) {
+    status
+    message
+  }
+}
+`

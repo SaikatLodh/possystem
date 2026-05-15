@@ -1,5 +1,3 @@
-
-
 export interface User {
   id: string;
   fullname: string;
@@ -26,7 +24,7 @@ export interface Table {
   tableNumber: number;
   status: string;
   capacity: number;
-  confirmedByWaiters: User[]
+  confirmedByWaiters: User[];
   isDeleted: boolean;
   createdAt: string;
   updatedAt: string;
@@ -53,7 +51,6 @@ export interface Pagination {
   limit: number;
 }
 
-
 export interface CartItem {
   id: string;
   quantity: number;
@@ -67,6 +64,40 @@ export interface CartItem {
   isDeleted: boolean;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface Booking {
+  id: string;
+  table: Table;
+  paymentStatus: "paid" | "failed" | "pending";
+  confirmStatus: "confirmed" | "not confirmed" | "pending";
+  foods: Food[];
+  user: User;
+  tableId: string;
+  userId: string;
+  isDeleted: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface Payment {
+  id: string;
+  amount: number;
+  paymentStatus: "paid" | "failed" | "pending";
+  confirmStatus: "confirmed" | "not confirmed" | "pending";
+  createdAt: string;
+  updatedAt: string;
+  user: User;
+  booking: {
+    id: string;
+    tableId: string;
+    table: {
+      id: string;
+      tableNumber: number;
+      status: string;
+      capacity: number;
+    };
+  };
 }
 
 export interface GraphqlMutation {
@@ -153,15 +184,29 @@ export interface GraphqlMutation {
     status: number;
     message: string;
   };
+  createBooking: {
+    status: number;
+    message: string;
+  };
+  updateBooking: {
+    status: number;
+    message: string;
+  };
+  createWaiter: {
+    status: number;
+    message: string;
+  };
+  toggleTableStatus: {
+    status: number;
+    message: string;
+  };
 }
-
-
 
 export interface GraphqlQuery {
   getUser: {
     user: User;
-    status: number,
-    message: string
+    status: number;
+    message: string;
   };
   getTables: {
     tables: Table[];
@@ -186,5 +231,35 @@ export interface GraphqlQuery {
     status: number;
     message: string;
     cartItems: CartItem[];
-  }
+  };
+  getBookings: {
+    status: number;
+    message: string;
+    bookings: Booking[];
+  };
+  getUserBookings: {
+    status: number;
+    message: string;
+    bookings: Booking[];
+  };
+  waiters: {
+    status: number;
+    message: string;
+    waiters: User[];
+  };
+  getKeys: {
+    status: number;
+    message: string;
+    data: {
+      key: string;
+    };
+  };
+  dashboardData: {
+    status: number;
+    message: string;
+    data: {
+      recentOrder: Payment[];
+      popularDishes: Food[];
+    };
+  };
 }

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import BackButton from "../components/shared/BackButton";
 import { MdRestaurantMenu } from "react-icons/md";
 import CustomerInfo from "../components/menu/CustomerInfo";
@@ -8,19 +8,24 @@ import MenuContainer from "../components/menu/MenuContainer";
 import { useAppSelector } from "../store/hook";
 import { useSearchParams } from "react-router-dom";
 import useQlQuery from "../graphql/globalRequest";
-import { CART_ITEMS, CATEGORIES_COUNT } from "../tanstackKeys";
+import { CART_ITEMS, CATEGORIES_COUNT, USER_BOOKINGS } from "../tanstackKeys";
 import { getCartItems } from "../graphql/query/cartItem";
 import { getCategoriesCount } from "../graphql/query/food";
+import { getUserBookings } from "../graphql/query/booking";
 
 const Menu = () => {
   const [searchParams] = useSearchParams();
   const table = searchParams.get("table");
+  const tableId = searchParams.get("tableId");
+
   useEffect(() => {
     document.title = "POS | Menu";
   }, []);
   const { user } = useAppSelector((state) => state.auth);
   const { data: cartData, isLoading: isCartLoading } = useQlQuery(CART_ITEMS, getCartItems);
   const { data: categoriesCountData } = useQlQuery(CATEGORIES_COUNT, getCategoriesCount);
+  const { data: bookingData } = useQlQuery(USER_BOOKINGS, getUserBookings);
+  const [bookingId, setBookingId] = useState<string>(bookingData?.getUserBookings?.bookings[0].id as string || "")
 
   return (
     <section className="bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex gap-3 w-full">
@@ -47,8 +52,8 @@ const Menu = () => {
             </div>
           </div>
         </div>
-
         <MenuContainer cartItems={cartData?.getCartItemsByUserId?.cartItems || []} categoriesCountData={categoriesCountData?.getCategoriesCount?.categories || []} />
+
       </div>
       {/* Right Div */}
       <div className="flex flex-col bg-[#1a1a1a] my-4 mr-3 rounded-lg pt-2 w-[25%]">
@@ -59,7 +64,7 @@ const Menu = () => {
         <CartInfo cartItems={cartData?.getCartItemsByUserId?.cartItems || []} isLoading={isCartLoading} />
         <hr className="border-[#2a2a2a] border-t-2" />
         {/* Bills */}
-        <Bill cartItems={cartData?.getCartItemsByUserId?.cartItems || []} />
+        <Bill cartItems={cartData?.getCartItemsByUserId?.cartItems || []} bookingId={bookingId} tableId={tableId || ""} />
       </div>
 
 
