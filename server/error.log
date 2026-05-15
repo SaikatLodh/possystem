@@ -332,3 +332,7 @@
 {"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-08T14:49:47.483Z"}
 {"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-08T15:00:38.685Z"}
 {"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-08T15:00:49.239Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T15:15:44.331Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-15T15:21:06.706Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.743Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.785Z"}

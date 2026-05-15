@@ -10989,3 +10989,126 @@
 {"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-08T20:12:06.889Z"}
 {"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-08T20:12:51.752Z"}
 {"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-08T20:12:51.759Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T14:47:42.269Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T14:47:42.283Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:47:43.201Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:47:43.208Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:47:46.982Z"}
+{"level":"warn","message":"Cart items not found","service":"test-service","timestamp":"2026-05-15T14:47:46.986Z"}
+{"level":"info","message":"Tables fetched successfully","service":"test-service","timestamp":"2026-05-15T14:47:48.859Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T14:47:50.500Z"}
+{"level":"info","message":"Waiters fetched successfully","service":"test-service","timestamp":"2026-05-15T14:47:51.914Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:49:08.478Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:49:08.484Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:49:32.539Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:49:32.544Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:49:55.730Z"}
+{"level":"warn","message":"Cart items not found","service":"test-service","timestamp":"2026-05-15T14:49:55.740Z"}
+{"level":"info","message":"Tables fetched successfully","service":"test-service","timestamp":"2026-05-15T14:49:57.145Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T14:49:58.450Z"}
+{"level":"info","message":"Waiters fetched successfully","service":"test-service","timestamp":"2026-05-15T14:49:59.549Z"}
+{"level":"warn","message":"Cart items not found","service":"test-service","timestamp":"2026-05-15T14:52:59.644Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:52:59.652Z"}
+{"level":"info","message":"Tables fetched successfully","service":"test-service","timestamp":"2026-05-15T14:53:00.784Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T14:53:02.458Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:53:23.728Z"}
+{"level":"warn","message":"Cart items not found","service":"test-service","timestamp":"2026-05-15T14:53:23.734Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:53:54.635Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:53:54.641Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:14.680Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:14.686Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:54:16.542Z"}
+{"level":"warn","message":"Cart items not found","service":"test-service","timestamp":"2026-05-15T14:54:16.545Z"}
+{"level":"info","message":"Cart item created successfully with ID: d6e36461-160e-4434-9616-070c7cee9cbf","service":"test-service","timestamp":"2026-05-15T14:54:19.913Z"}
+{"level":"info","message":"Cart items retrieved successfully for user: 745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:19.925Z"}
+{"level":"info","message":"Tables fetched successfully","service":"test-service","timestamp":"2026-05-15T14:54:21.889Z"}
+{"level":"info","message":"Foods fetched successfully","service":"test-service","timestamp":"2026-05-15T14:54:27.130Z"}
+{"level":"info","message":"Cart items retrieved successfully for user: 745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:27.134Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:34.105Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:34.113Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:35.709Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:35.715Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:38.081Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:54:38.086Z"}
+{"level":"info","message":"Fetching profile for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:55:23.156Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=745f7045-45d8-412d-ad03-a13b5b79ffe6","service":"test-service","timestamp":"2026-05-15T14:55:23.162Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T15:01:44.200Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T15:15:44.331Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-15T15:21:06.706Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.743Z"}
+{"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.785Z"}
+{"level":"info","message":"User login successfully","service":"test-service","timestamp":"2026-05-15T16:18:05.884Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:18:06.293Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:18:06.325Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:18:06.334Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:18:06.340Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:18:09.225Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:18:14.035Z"}
+{"level":"info","message":"Table status toggled successfully","service":"test-service","timestamp":"2026-05-15T16:18:17.368Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:18:17.388Z"}
+{"level":"info","message":"Table status toggled successfully","service":"test-service","timestamp":"2026-05-15T16:18:19.722Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:18:19.739Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:11.038Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:11.063Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:22:11.071Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:36.004Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:36.020Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:22:36.029Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:43.852Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:43.858Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:22:43.864Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:53.034Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:22:53.041Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:22:53.047Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:08.982Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:08.987Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:09.001Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:14.764Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:14.771Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:14.778Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:18.059Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:18.061Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:23:18.110Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:23:18.113Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:19.572Z"}
+{"level":"info","message":"Table status toggled successfully","service":"test-service","timestamp":"2026-05-15T16:23:21.204Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:21.221Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:35.004Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:35.009Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:35.018Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:36.559Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:36.562Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:23:36.601Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:23:36.605Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:37.801Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:52.027Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:52.035Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:52.041Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:54.095Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:54.103Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:54.111Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:58.551Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:23:58.558Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:23:58.566Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:27:31.029Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:27:31.033Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:27:31.037Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:27:32.991Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:27:32.998Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:27:33.004Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:02.633Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:02.636Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:28:02.640Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:28:02.654Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:28:02.656Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:10.249Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:10.256Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:28:10.270Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:12.610Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:28:12.611Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:28:12.651Z"}
+{"level":"info","message":"Refresh token successfully","service":"test-service","timestamp":"2026-05-15T16:28:12.656Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:28:13.940Z"}
+{"level":"info","message":"Fetching profile for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:29:58.941Z"}
+{"level":"info","message":"Profile fetched successfully for user: userId=0fd619e8-3e65-4ab5-940c-b304f711cdfe","service":"test-service","timestamp":"2026-05-15T16:29:58.948Z"}
+{"level":"info","message":"Bookings fetched successfully","service":"test-service","timestamp":"2026-05-15T16:29:58.955Z"}
