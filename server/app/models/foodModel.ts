@@ -51,9 +51,16 @@ Food.init(
       allowNull: false,
     },
     image: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
       allowNull: true,
       defaultValue: null,
+      get() {
+        const value = this.getDataValue("image" as any);
+        return value ? JSON.parse(value) : null;
+      },
+      set(value) {
+        this.setDataValue("image" as any, value ? JSON.stringify(value) : null);
+      },
     },
     slug: {
       type: DataTypes.STRING,

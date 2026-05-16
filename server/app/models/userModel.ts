@@ -61,9 +61,19 @@ User.init(
       },
     },
     profilePicture: {
-      type: DataTypes.JSON,
+      type: DataTypes.TEXT,
       allowNull: true,
       defaultValue: null,
+      get() {
+        const value = this.getDataValue("profilePicture" as any);
+        return value ? JSON.parse(value) : null;
+      },
+      set(value) {
+        this.setDataValue(
+          "profilePicture" as any,
+          value ? JSON.stringify(value) : null,
+        );
+      },
     },
     role: {
       type: DataTypes.ENUM(ROLES.ADMIN, ROLES.CUSTOMER, ROLES.WAITER),
