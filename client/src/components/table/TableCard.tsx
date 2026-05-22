@@ -30,7 +30,7 @@ const TableCard = ({
     <>
       <div
         key={id}
-        onClick={() => user?.role === "customer" && status === "available" ? onClick && onClick(id, name, status) : onClick && onClick(id, name, status)}
+        onClick={() => user?.role === "customer" && status === "available" ? onClick && onClick(id, name, status) : null}
         className=" hover:bg-[#2c2c2c] bg-[#262626] p-4 rounded-lg cursor-pointer group  flex flex-col justify-between"
       >
         <div className="flex items-center justify-between px-1">

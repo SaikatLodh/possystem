@@ -22,7 +22,7 @@ export const bookResolvers = {
     ),
   },
   Mutation: {
-    createBooking: withRole([ROLES.CUSTOMER, ROLES.ADMIN])(
+    createBooking: withRole([ROLES.CUSTOMER])(
       (
         _: any,
         args: { tableId: string; foodsId: string[] },

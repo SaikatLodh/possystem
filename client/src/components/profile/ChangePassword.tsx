@@ -1,4 +1,3 @@
-
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -90,7 +89,7 @@ const ChangePassword = () => {
         <button
           type="submit"
           disabled={isPending}
-          className='mt-2 py-4 bg-[#F6B100] hover:bg-[#fdc003] text-white cursor-pointer font-black rounded-2xl transition-all shadow-[0_10px_20px_rgba(246,177,0,0.1)] active:scale-[0.98] disabled:opacity-50 tracking-wider'
+          className={`mt-2 py-4 bg-[#F6B100] hover:bg-[#fdc003] text-white cursor-pointer font-black rounded-2xl transition-all shadow-[0_10px_20px_rgba(246,177,0,0.1)] active:scale-[0.98] disabled:opacity-50 tracking-wider ${isPending ? "opacity-50 cursor-not-allowed" : ""}`}
         >
           {isPending ? 'Updating...' : 'CHANGE PASSWORD'}
         </button>

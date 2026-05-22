@@ -5,7 +5,6 @@ import { z } from "zod";
 import { FaUserTie } from "react-icons/fa";
 import { MdTableBar } from "react-icons/md";
 import { MdOutlineReorder } from "react-icons/md";
-import { IoPersonAddOutline } from "react-icons/io5";
 import { useAppSelector } from "../store/hook";
 import useQlQuery, { useQlMutation } from "../graphql/globalRequest";
 import { getWaiters, deleteWaiter as deleteWaiterMutation } from "../graphql/query/admin";
@@ -22,13 +21,15 @@ import DeleteWaiterModal from "../components/waiter/DeleteWaiterModal";
 const waiterSchema = z.object({
   fullname: z
     .string()
+    .trim()
     .min(3, "Full name must be at least 3 characters")
     .max(50, "Full name must be at most 50 characters"),
-  email: z.string().email("Please enter a valid email address"),
+  email: z.string().trim().email("Please enter a valid email address"),
   number: z
     .string()
+    .trim()
     .min(1, "Phone number is required")
-    .regex(/^\d{10}$/, "Invalid phone number"),
+    .regex(/^\+?[0-9\s\-()]{7,15}$/, "Invalid phone number"),
   password: z
     .string()
     .min(6, "Password must be at least 6 characters")

@@ -110,7 +110,7 @@ const TableModal = ({ register, handleSubmit, reset, errors, isModalOpen, setIsM
                         <button
                             type="submit"
                             disabled={isPending || isUpdating}
-                            className="px-6 py-2.5 rounded-xl bg-[#F6B100] hover:bg-[#fdc003] text-white font-bold shadow-[0_0_20px_rgba(255,209,108,0.2)] transition-all cursor-pointer flex items-center justify-center min-w-[120px]"
+                            className={`px-6 py-2.5 rounded-xl bg-[#F6B100] hover:bg-[#fdc003] text-white font-bold shadow-[0_0_20px_rgba(255,209,108,0.2)] transition-all cursor-pointer flex items-center justify-center min-w-[120px] ${isPending || isUpdating ? "opacity-50 cursor-not-allowed" : ""}`}
                         >
                             {isPending || isUpdating ? (editTableId ? "Updating..." : "Creating...") : (editTableId ? "Update Table" : "Create Table")}
                         </button>

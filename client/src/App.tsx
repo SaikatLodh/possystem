@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cheackauth from "./middleware/Cheackauth";
 import { useAppSelector } from "./store/hook";
 import MainWrapper from "./pages/MainWrapper";
-import Profile from "./pages/Profile";
+
 
 const Auth = lazy(() => import("./pages/Auth"));
 const LogIn = lazy(() => import("./components/auth/LogIn"));
@@ -17,6 +17,7 @@ const Tables = lazy(() => import("./pages/Tables "));
 const Menu = lazy(() => import("./pages/Menu"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Waiter = lazy(() => import("./pages/Waiter"));
+const Profile = lazy(() => import("./pages/Profile"));
 const ServiceUnavailable = lazy(() => import("./pages/ServiceUnavailable"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 

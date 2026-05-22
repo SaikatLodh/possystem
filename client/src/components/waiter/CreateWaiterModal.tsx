@@ -155,7 +155,7 @@ const CreateWaiterModal = ({
           <button
             type="submit"
             disabled={isPending}
-            className="px-6 py-2.5 rounded-xl bg-[#F6B100] hover:bg-[#fdc003] text-white font-bold shadow-[0_0_20px_rgba(255,209,108,0.2)] transition-all cursor-pointer flex items-center justify-center min-w-[140px] disabled:opacity-60"
+            className={`px-6 py-2.5 rounded-xl bg-[#F6B100] hover:bg-[#fdc003] text-white font-bold shadow-[0_0_20px_rgba(255,209,108,0.2)] transition-all cursor-pointer flex items-center justify-center min-w-[140px] disabled:opacity-60 ${isPending ? "opacity-50 cursor-not-allowed" : ""}`}
           >
             {isPending ? "Creating..." : "Create Waiter"}
           </button>

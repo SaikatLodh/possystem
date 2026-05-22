@@ -336,3 +336,11 @@
 {"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-15T15:21:06.706Z"}
 {"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.743Z"}
 {"level":"error","message":"jwt expired","service":"test-service","timestamp":"2026-05-15T16:17:42.785Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:07.917Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:07.923Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:16.416Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:16.418Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:38.094Z"}
+{"level":"error","message":"Unauthorized","service":"test-service","timestamp":"2026-05-18T05:56:38.096Z"}
+{"level":"error","message":"Email does not exist","service":"test-service","timestamp":"2026-05-18T05:57:07.543Z"}
+{"level":"error","message":"Phone number must be a 10-digit number","service":"test-service","timestamp":"2026-05-18T06:56:08.808Z"}

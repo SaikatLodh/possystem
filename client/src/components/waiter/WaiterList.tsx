@@ -2,12 +2,12 @@ import { FaUserTie, FaEnvelope, FaPhone, FaCalendarAlt, FaTrashAlt } from "react
 import type { User } from "../../interface";
 
 
-const WaiterList = ({ 
-  waiters, 
-  onDelete 
-}: { 
-  waiters: User[], 
-  onDelete: (waiter: User) => void 
+const WaiterList = ({
+  waiters,
+  onDelete
+}: {
+  waiters: User[],
+  onDelete: (waiter: User) => void
 }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -62,10 +62,8 @@ const WaiterList = ({
 
           <div className="mt-6 pt-4 border-t border-white/5 flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <button className="text-[#F6B100] text-xs font-semibold hover:underline cursor-pointer">
-                Edit
-              </button>
-              <button 
+
+              <button
                 onClick={() => onDelete(waiter)}
                 className="text-red-500 hover:text-red-400 p-1 transition-colors cursor-pointer"
                 title="Delete Waiter"
